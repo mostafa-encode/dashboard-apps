@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Template for the project dashboard -->
+<templates id="template" xml:space="preserve">
+
+    <t t-name="ProjectDashboard">
+        <div class="oh_dashboards"
+             style="margin-top: 20px; overflow-y: scroll;vertical-align: middle;overflow-x: clip;max-height: -webkit-fill-available;">
+            <div class="container-fluid o_pj_dashboard"
+                 style="margin-left:4%;">
+                <t t-call="DashboardFilter"/>
+                <!--                <t t-call="DashboardProject"/>-->
+                <!--                <t t-call="DashboardChart"/>-->
+                <t t-call="FullDashboardChart"/>
+            </div>
+        </div>
+    </t>
+
+    <!-- Template for filter items -->
+    <t t-name="DashboardFilter">
+        <!-- Template for filter items -->
+        <div class="row main-section">
+            <!-- Filters -->
+            <div class="inner_select" style="display: flex;">
+                <p style="margin-left: 20px;">Start Date :</p>
+                <p>
+                    <input type="date" class="inner_select" id="start_date"
+                           name="start_date" t-ref="start_date"
+                           t-on-change="(ev) => this._onchangeFilter(ev)"/>
+                </p>
+                <p>End Date :</p>
+                <p>
+                    <input type="date" class="inner_select" id="end_date"
+                           name="end_date" t-ref="end_date"
+                           t-on-change="(ev) => this._onchangeFilter(ev)"/>
+                </p>
+                <p>Project :</p>
+                <p>
+                    <select class="inner_select" id="project_selection"
+                            t-ref="project_selection"
+                            t-on-change="(ev) => this._onchangeFilter(ev)">
+                        <option value="null">All Projects</option>
+                        <option t-foreach="state.projects" t-as="project"
+                                t-key="project.id"
+                                t-att-value="project.id">
+                                <t t-esc="project.name"/>
+                        </option>
+                    </select>
+                </p>
+                <p>Employees :</p>
+                <p>
+                    <select class="inner_select" id="employee_selection"
+                            t-ref="employee_selection"
+                            t-on-change="(ev) => this._onchangeFilter(ev)">
+                        <option value="null">All Employees</option>
+                        <option t-foreach="state.employees" t-as="employee"
+                                t-key="employee.id"
+                                t-att-value="employee.id">
+                                <t t-esc="employee.name"/>
+                        </option>
+                    </select>
+                </p>
+                <button class="btn btn-danger g-col-6 p-2"
+                        onclick="location.reload()"
+                        style="margin-left:18px; height: 37px;">
+                        Reset
+                </button>
+                </div>
+        </div>
+    </t>
+
+    <!-- Template for cards -->
+    <t t-name="DashboardProject">
+        <!-- Template for cards -->
+        <div class="row main-section">
+
+            <!-- Total Project -->
+            <div class="col-md-4 col-sm-6 oh-payslip">
+                <div class="oh-card" style="width: 410px;">
+                    <div class="oh-card-body tot_projects"
+                         t-on-click="(e) => this.tot_projects(e)"
+                         style="box-shadow:5px 11px 30px;">
+                        <div class="stat-widget-one" style="display:flex;">
+                            <div class="stat-icon"><i class="fa fa-puzzle-piece" /></div>
+                            <div class="stat-head"
+                                 style="padding: 5%;width: 60%;">Total Project</div>
+                            <div class="stat_count"
+                                 style="padding: 4%;width: 30%;"
+                                 id="tot_project" t-ref="tot_project">
+                                <t t-esc="total_projects"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Total Employees -->
+            <t t-if="flag_user == 1">
+                <div class="col-md-4 col-sm-6 oh-payslip">
+                    <div class="oh-card" style="width: 410px;">
+                        <div class="oh-card-body tot_emp"
+                             t-on-click="(e) => this.tot_emp(e)"
+                             style="box-shadow:5px 11px 30px;">
+                            <div class="stat-widget-one" style="display:flex;">
+                                <div class="stat-icon"><i class="fa fa-user" /></div>
+                                <div class="stat-head"
+                                     style="padding: 5%;width: 60%;">Total Employees</div>
+                                <div class="stat_count"
+                                     style="padding: 4%;width: 30%;"
+                                     id="tot_employee" t-ref="tot_employee">
+                                    <t t-esc="total_employees"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <!-- Total tasks -->
+            <div class="col-md-4 col-sm-6 oh-payslip">
+                <div class="oh-card" style="width: 410px;">
+                    <div class="oh-card-body tot_tasks"
+                         t-on-click="(e) => this.tot_tasks(e)"
+                         style="box-shadow:5px 11px 30px;">
+                        <div class="stat-widget-one" style="display:flex;">
+                            <div class="stat-icon"><i class="fa fa-tasks" /></div>
+                            <div class="stat-head"
+                                 style="padding: 5%;width: 60%;">Total tasks</div>
+                            <div class="stat_count"
+                                 style="padding: 4%;width: 30%;" id="tot_task" t-ref="tot_task">
+                                <t t-esc="total_tasks"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hours Recorded -->
+            <t t-if="flag_user == 1">
+                <div class="col-md-4 col-sm-6 oh-payslip">
+                    <div class="oh-card" style="width: 410px;">
+                        <div class="oh-card-body hr_recorded"
+                             t-on-click="(e) => this.hr_recorded(e)"
+                             style="box-shadow:5px 11px 30px;">
+                            <div class="stat-widget-one" style="display:flex;">
+                                <div class="stat-icon"><i class="fa fa-clock-o" /></div>
+                                <div class="stat-head"
+                                     style="padding: 5%;width: 60%;">Hours Recorded</div>
+                                <div class="stat_count"
+                                     style="padding: 4%;width: 30%;"
+                                     id="tot_hrs" t-ref="tot_hrs">
+                                    <t t-esc="total_hours"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <!-- Total Margin -->
+            <t t-if="flag_user == 1">
+                <div class="col-md-4 col-sm-6 oh-payslip">
+                    <div class="oh-card" style="width: 410px;">
+                        <div class="oh-card-body tot_profitability"
+                             t-on-click="(e) => this.tot_sale(e)"
+                             style="box-shadow:5px 11px 30px;">
+                            <div class="stat-widget-one" style="display:flex;">
+                                <div class="stat-icon">
+                                    <i class="fa fa-dollar"/>
+                                </div>
+                                <div class="stat-head"
+                                     style="padding: 5%;width: 60%;">
+                                    Total Margin
+                                </div>
+                                <div class="stat_count"
+                                     style="padding: 4%;width: 30%;display:inline-table;"
+                                     id="tot_margin" t-ref="tot_margin">
+                                    <t t-esc="total_profitability"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+
+            <!-- Total Sale Orders -->
+            <div class="col-md-4 col-sm-6 oh-payslip">
+                <div class="oh-card" style="width: 410px;">
+                    <div class="oh-card-body tot_sale"
+                         t-on-click="(e) => this.tot_sale(e)"
+                         style="box-shadow:5px 11px 30px;">
+                        <div class="stat-widget-one" style="display:flex;">
+                            <div class="stat-icon">
+                                <i class="fa fa-ticket"/>
+                            </div>
+                            <div class="stat-head"
+                                 style="padding: 5%;width: 60%;">
+                                Total Sale Orders
+                            </div>
+                            <div class="stat_count"
+                                 style="padding: 4%;width: 30%;" id="tot_so" t-ref="tot_so">
+                                <t t-esc="total_sale_orders"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <!-- Template for charts (chart and table) [ col-7 col-4] -->
+    <t t-name="DashboardChart">
+
+        <!-- Template for charts -->
+        <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12" style="margin-top: 30px;">
+            <div class="row main-section">
+
+                <div class="col-sm-7 col-lg-7">
+
+                    <!-- Project Analysis (type=doughnut) -->
+                    <div class="project_graph_view" style="box-shadow:5px 11px 30px;">
+                        <div class="text-color hr-chart-1">
+                            <div class="oh-card-body pb-0"
+                                 style="text-align:center;">
+                                <h2 style="margin-left:45%;padding-top:2%;">
+                                    Project Analysis
+                                </h2>
+                            </div>
+                            <canvas id="project_doughnut"
+                                    t-ref="project_doughnut"
+                                    style="background:#fff;" width="200"
+                                    height="120"/>
+                        </div>
+                    </div>
+
+                    <!-- Project Task Analysis (type=doughnut) -->
+                    <div class="graph_view" style="box-shadow:5px 11px 30px;">
+                        <div class="text-color hr-chart-1">
+                            <div class="oh-card-body pb-0"
+                                 style="text-align:center;">
+                                <h2 style="margin-left:45%;padding-top:2%;">
+                                    Task Analysis
+                                </h2>
+                            </div>
+                            <canvas id="project_task_doughnut"
+                                    t-ref="project_task_doughnut"
+                                    style="background:#fff;" width="200"
+                                    height="120"/>
+                        </div>
+                    </div>
+
+                    <!-- Material Requisitions Status (type=bar) -->
+                    <div class="selling_product_graph_view" style="box-shadow:5px 11px 30px;">
+                        <div class="oh-card text-color">
+                            <canvas class="material_requisitions_status"
+                                    t-ref="material_requisitions_status"
+                                    style="background:#fff;" width="200"
+                                    height="120"/>
+                        </div>
+                    </div>
+
+
+                    <!-- Cumulative RFQs Chart - below Gantt, with margin -->
+                    <div class="selling_product_graph_view" style="box-shadow:5px 11px 30px; margin-top: 30px;">
+                        <div class="oh-card text-color">
+                            <h2 style="text-align: center; padding-top: 1%;">Monthly RFQs Created from MRs</h2>
+                            <canvas class="rfq_cumulative_chart"
+                                    t-ref="rfq_cumulative_chart"
+                                    style="background:#fff; width: 100%; height: 400px;"/>
+                        </div>
+                    </div>
+
+
+                    <!-- Gantt Chart - vertically placed -->
+                    <div class="selling_product_graph_view" style="box-shadow:5px 11px 30px; margin-top: 30px;">
+                        <div class="oh-card text-color">
+                            <h2 style="text-align: center; padding-top: 1%;">Task Timeline</h2>
+                            <div id="gantt_chart"
+                                 t-ref="gantt_chart"
+                                 style="background:#fff; width: 100%; height: 400px;"/>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+                <div class="col-md-4 col-lg-4" style="top: 82px;right: -100px;">
+
+                    <!-- Stage Wise Total Projects -->
+                    <div class="stage_wise_total">
+                        <div class="hr_notification" style="background: #fff;transition: transform 0.2s ease, box-shadow 0.2s ease;will-change: transform, box-shadow;box-shadow: 0 10px 40px 0 rgba(62,57,107,0.07), 0 2px 9px 0 rgba(62,57,107,0.06);
+                            height: auto;padding-bottom: 15px;box-shadow:5px 11px 30px;">
+                            <div class="hr_notification_head"
+                                 style="font-size: 17px;text-align: center;padding: 12px 0;color: #fff;font-weight: 300;background: #000080;margin-bottom: 9px;">
+                                Stage Wise Total Projects
+                            </div>
+                            <table id="table_status" style="width">
+                                <tr>
+                                    <th/>
+                                    <th/>
+                                </tr>
+                                <!--                                                    <t t-foreach="project_stage_list"-->
+                                <!--                                                       t-as="data" t-key="data['name']">-->
+                                <t t-foreach="project_status_list"
+                                   t-as="data" t-key="data['name']">
+                                    <tr>
+                                        <td style="text-align:center;">
+                                            <h4 t-esc="data['name']"/>
+                                        </td>
+                                        <td style="text-align:center;">
+                                            <h4 class="fleet-pill"
+                                                t-esc="data['projects']"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </table>
+                        </div>
+                    </div>
+
+
+                    <!-- Project Task Details -->
+                    <div class="hr_notification" style="background: #fff;transition: transform 0.2s ease, box-shadow 0.2s ease;will-change: transform, box-shadow;box-shadow: 0 10px 40px 0 rgba(62,57,107,0.07), 0 2px 9px 0 rgba(62,57,107,0.06);
+                        height: 1000px;margin-bottom: 15px;margin-top: 15px;box-shadow:5px 11px 30px;">
+                        <div class="hr_notification_head"
+                             style="font-size: 17px;text-align: center;padding: 12px 0;color: #fff;font-weight: 300;background: #000080;margin-bottom: 9px;">
+                            Project Task Details
+                        </div>
+                        <div class="col-sm-12 col-lg-12"
+                             style="padding:0;">
+                            <div class="text-color">
+                                <div class="media"
+                                     style="overflow-y: auto;height: 800px;">
+                                    <div class="media-body">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th rowspan="14">Project Name</th>
+                                                    <th rowspan="14">Task Name</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <t t-foreach="task_data"
+                                                   t-as="proj"
+                                                   t-key="proj[1]">
+                                                    <tr>
+                                                        <td>
+                                                            <t t-if="flag_user == 1">
+                                                                <t t-esc="proj[2]['en_US']"/>
+                                                            </t>
+                                                            <t t-else="">
+                                                                <t t-esc="proj[2]"/>
+                                                            </t>
+                                                        </td>
+                                                        <td>
+                                                            <t t-esc="proj[0]"/>
+                                                        </td>
+                                                    </tr>
+                                                </t>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </t>
+
+
+    <!-- Template for charts (chart and table) [ col-10] -->
+    <t t-name="FullDashboardChart">
+
+        <!-- Template for charts -->
+        <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12" style="margin-top: 30px;">
+            <div class="row main-section">
+
+                <div class="col-sm-5 col-lg-5">
+
+                    <!-- Project Analysis (type=doughnut) -->
+                    <div class="project_graph_view" style="box-shadow:5px 11px 30px;">
+                        <div class="text-color hr-chart-1 text-center">
+                            <div class="oh-card-body pb-0"
+                                 style="text-align:center;">
+                                <h2 style="margin-left:45%;padding-top:2%;">
+                                    Project Analysis
+                                </h2>
+                            </div>
+                            <canvas id="project_doughnut"
+                                    t-ref="project_doughnut"
+                                    style="background:#fff;" width="100%"
+                                    height="80"/>
+                        </div>
+                    </div>
+
+
+                    <!-- Material Requisitions Status (type=bar) -->
+                    <div class="selling_product_graph_view" style="box-shadow:5px 11px 30px;">
+                        <div class="oh-card text-color">
+                            <canvas class="material_requisitions_status"
+                                    t-ref="material_requisitions_status"
+                                    style="background:#fff;"/>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-sm-5 col-lg-5">
+
+
+                    <!-- Project Task Analysis (type=doughnut) -->
+                    <div class="graph_view" style="box-shadow:5px 11px 30px;">
+                        <div class="text-color hr-chart-1">
+                            <div class="oh-card-body pb-0"
+                                 style="text-align:center;">
+                                <h2 style="margin-left:45%;padding-top:2%;">
+                                    Task Analysis
+                                </h2>
+                            </div>
+                            <canvas id="project_task_doughnut"
+                                    t-ref="project_task_doughnut"
+                                    style="background:#fff;" width="100%"
+                                    height="80"/>
+                        </div>
+                    </div>
+
+                    <!-- Cumulative RFQs Chart - below Gantt, with margin -->
+                    <div class="selling_product_graph_view" style="box-shadow:5px 11px 30px;">
+                        <div class="oh-card text-color">
+                            <h2 style="text-align: center;">Monthly RFQs Created from MRs</h2>
+                            <canvas class="rfq_cumulative_chart"
+                                    t-ref="rfq_cumulative_chart"
+                                    style="background:#fff;"/>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-sm-10 col-lg-10">
+
+                    <!-- Gantt Chart - vertically placed -->
+                    <div class="selling_product_graph_view" style="box-shadow:5px 11px 30px; margin-top: 30px;">
+                        <div class="oh-card text-color">
+                            <h2 style="text-align: center; padding-top: 1%;">Task Timeline</h2>
+                            <div id="gantt_chart"
+                                 t-ref="gantt_chart"
+                                 style="background:#fff; width: 100%; height: 400px;"/>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </t>
+
+</templates>

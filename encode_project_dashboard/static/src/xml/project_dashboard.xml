@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <!-- Main Dashboard Template -->
+    <t t-name="ProjectDashboardTemplate">
+        <div class="encode-project-dashboard">
+            <t t-call="LoadingError"/>
+
+            <div t-if="!state.loading and !state.error" class="encode-dashboard-content">
+                <t t-call="DashboardFilter"/>
+                <t t-call="DashboardContainer"/>
+            </div>
+        </div>
+    </t>
+
+    <!-- Loading and Error Template -->
+    <t t-name="LoadingError">
+        <!-- Loading State -->
+        <div t-if="state.loading" class="encode-loading">
+            <div class="encode-loading-spinner"></div>
+            <p>Loading project data...</p>
+        </div>
+
+        <!-- Error State -->
+        <div t-if="state.error" class="encode-error">
+            <h3>Error Loading Dashboard</h3>
+            <p t-esc="state.error"/>
+            <button class="btn btn-primary" t-on-click="() => this.loadDashboardData()">Retry</button>
+        </div>
+    </t>
+
+
+    <!-- Filter Toolbar Template -->
+    <t t-name="DashboardFilter">
+        <!-- Compact Header with Search & Filters -->
+        <div class="encode-dashboard-header">
+            <div class="encode-header-content">
+                <div class="encode-header-left">
+                    <h2>Project Dashboard</h2>
+                    <div class="encode-project-count"
+                         t-att-class="`encode-project-count-${state.activeFilterType}`">
+                        <t t-esc="state.filteredProjects.length"/>
+                        Projects
+                    </div>
+                </div>
+
+                <div class="encode-header-right">
+                    <!-- Search Container -->
+                    <div class="encode-search-container">
+                        <i class="fa fa-search encode-search-icon"></i>
+                        <input type="text"
+                               class="encode-search-input"
+                               placeholder="Search projects..."
+                               t-on-input="(ev) => this.filterProjects(ev.target.value)"
+                               t-att-value="state.searchQuery"/>
+                        <i t-if="state.searchQuery"
+                           class="fa fa-times encode-clear-search"
+                           t-on-click="() => this.clearSearch()"></i>
+                    </div>
+
+                    <!-- Simple Filter Tags -->
+                    <div class="encode-filter-tags">
+                        <span class="encode-filter-tag"
+                              t-att-class="state.statusFilters.all ? 'active' : ''"
+                              t-on-click="() => this.updateStatusFilter('all', true)">All</span>
+                        <span class="encode-filter-tag"
+                              t-att-class="state.statusFilters.active ? 'active' : ''"
+                              t-on-click="() => this.updateStatusFilter('active', true)">Active</span>
+                        <span class="encode-filter-tag"
+                              t-att-class="state.statusFilters.completed ? 'active' : ''"
+                              t-on-click="() => this.updateStatusFilter('completed', true)">Completed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <!-- Dashboard Container Template -->
+    <t t-name="DashboardContainer">
+        <!-- Projects Grid -->
+        <div class="encode-projects-grid">
+            <div t-foreach="state.filteredProjects" t-as="project" t-key="project.id"
+                 class="encode-project-card"
+                 t-on-click="() => this.openProject(project.id)"
+                 t-on-keydown="(ev) => ev.key === 'Enter' &amp;&amp; this.openProject(project.id)"
+                 role="button"
+                 tabindex="0"
+                 t-att-data-project-id="project.id">
+
+                <!-- Project Header -->
+                <div class="encode-project-header">
+                    <h3 class="encode-project-name" t-esc="project.name"/>
+                    <div class="encode-project-click-hint">Click to view project details</div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="encode-charts-section">
+                    <!-- Completion Chart (Large) -->
+                    <div class="encode-chart-container encode-completion-chart-container">
+                        <div class="encode-completion-chart"></div>
+                        <div class="encode-chart-label">Completion %</div>
+                    </div>
+
+                    <!-- SPI and Cost Charts (Small) -->
+                    <div class="encode-small-charts">
+                        <div class="encode-chart-container">
+                            <div class="encode-spi-chart"></div>
+                            <div class="encode-chart-label">SPI</div>
+                        </div>
+                        <div class="encode-chart-container">
+                            <div class="encode-cost-chart"></div>
+                            <div class="encode-chart-label">Cost %</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simple Icon Indicators -->
+                <div class="encode-project-indicators">
+                    <!-- Task Status -->
+                    <div class="encode-indicator">
+                        <i class="fa fa-tasks encode-indicator-icon"
+                           t-att-class="project.total_tasks > 0 ? 'text-primary' : 'text-muted'"></i>
+                        <span class="encode-indicator-text" t-esc="project.total_tasks"/>
+                        <span class="encode-indicator-label">Tasks</span>
+                    </div>
+
+                    <!-- Completion Status -->
+                    <div class="encode-indicator">
+                        <i class="fa fa-check-circle encode-indicator-icon"
+                           t-att-class="project.completed_tasks > 0 ? 'text-success' : 'text-muted'"></i>
+                        <span class="encode-indicator-text" t-esc="project.completed_tasks"/>
+                        <span class="encode-indicator-label">Done</span>
+                    </div>
+
+                    <!-- Allocated Time Status -->
+                    <div class="encode-indicator">
+                        <i class="fa fa-hourglass-half encode-indicator-icon encode-indicator-icon-small"
+                           t-att-class="project.allocated_hours > 0 ? 'text-secondary' : 'text-muted'"></i>
+                        <span class="encode-indicator-text" t-esc="project.allocated_hours"/>
+                        <span class="encode-indicator-label">Allocated</span>
+                    </div>
+
+                    <!-- Time Status -->
+                    <div class="encode-indicator">
+                        <i class="fa fa-clock-o encode-indicator-icon"
+                           t-att-class="project.total_time_spent > 0 ? 'text-info' : 'text-muted'"></i>
+                        <span class="encode-indicator-text" t-esc="project.total_time_spent"/>
+                        <span class="encode-indicator-label">Hours</span>
+                    </div>
+
+                    <!-- Budget Status -->
+                    <div class="encode-indicator">
+                        <i class="fa fa-money encode-indicator-icon"
+                           t-att-class="project.budget_budgeted > 0 ? 'text-warning' : 'text-muted'"></i>
+                        <span class="encode-indicator-text" t-esc="project.budget_budgeted"/>
+                        <span class="encode-indicator-label">Budget</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Empty State -->
+        <div t-if="state.filteredProjects.length === 0" class="encode-empty-state">
+            <h3>No Projects Found</h3>
+            <p t-if="state.searchQuery or state.activeFilters">Try adjusting your search or filter criteria.</p>
+            <p t-else="">Create some projects to see them displayed in the dashboard.</p>
+        </div>
+    </t>
+
+</templates>

@@ -1,0 +1,13 @@
+<odoo>
+    <!-- Place Dashboard before the default Projects menu -->
+    <menuitem id="menu_project_dashboard_root"
+              name="Dashboard"
+              parent="project.menu_main_pm"
+              action="action_open_project_dashboard"
+              sequence="0"/>
+
+</odoo>
+
+
+
+

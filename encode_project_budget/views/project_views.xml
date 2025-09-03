@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="edit_project_project_budget_view" model="ir.ui.view">
+        <field name="name">project.view.form.project.budget</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet//div[@class='oe_button_box']" position="inside">
+                <button type="object"
+                        name="action_open_budgets"
+                        class="oe_stat_button"
+                        icon="fa-money"
+                        invisible="budget_count == 0">
+                    <field name="budget_count" widget="statinfo" string="Budgets"/>
+                </button>
+            </xpath>
+
+            <xpath expr="//form/header" position="inside">
+                <button
+                        name="action_create_budget"
+                        type="object"
+                        string="Create Budget"
+                        class="oe_highlight"
+                        invisible="budget_count"
+                />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
