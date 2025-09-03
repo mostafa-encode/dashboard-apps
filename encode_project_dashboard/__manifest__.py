@@ -7,7 +7,7 @@
     'depends': ['project', 'hr_timesheet', 'analytic', 'encode_project_budget', 'encode_project_template'],
     'data': [
         'views/project_dashboard_views.xml',
-        'views/menu.xml',
+        'views/menus.xml',
     ],
     'assets': {
         'web.assets_backend': [
