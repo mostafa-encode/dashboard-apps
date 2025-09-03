@@ -6,7 +6,7 @@
     'author': 'Encode',
     'depends': ['project', 'hr_timesheet', 'analytic', 'encode_project_budget', 'encode_project_template'],
     'data': [
-        'views/project_dashboard_actions.xml',
+        'views/project_dashboard_views.xml',
         'views/menu.xml',
     ],
     'assets': {
