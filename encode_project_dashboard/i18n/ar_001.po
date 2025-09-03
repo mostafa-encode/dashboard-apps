@@ -1,0 +1,153 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* encode_project_dashboard
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-01 07:22+0000\n"
+"PO-Revision-Date: 2025-09-01 07:22+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: encode_project_dashboard
+#. odoo-javascript
+#: code:addons/encode_project_dashboard/static/src/xml/project_dashboard.xml:0
+msgid "Active"
+msgstr "نشط"
+
+#. module: encode_project_dashboard
+#. odoo-javascript
+#: code:addons/encode_project_dashboard/static/src/xml/project_dashboard.xml:0
+msgid "All"
+msgstr "الكل"
+
+#. module: encode_project_dashboard
+#. odoo-javascript
+#: code:addons/encode_project_dashboard/static/src/xml/project_dashboard.xml:0
+msgid "Allocated"
+msgstr "مخصص"
+
+#. module: encode_project_dashboard
+#. odoo-javascript
+#: code:addons/encode_project_dashboard/static/src/xml/project_dashboard.xml:0
+msgid "Budget"
+msgstr "الميزانية"
+
+#. module: encode_project_dashboard
+#. odoo-javascript
+#: code:addons/encode_project_dashboard/static/src/xml/project_dashboard.xml:0
+msgid "Click to view project details"
+msgstr "انقر لعرض تفاصيل المشروع"
+
+#. module: encode_project_dashboard
+#. odoo-javascript
+#: code:addons/encode_project_dashboard/static/src/xml/project_dashboard.xml:0
+msgid "Completed"
+msgstr "مكتمل"
+
+#. module: encode_project_dashboard
+#. odoo-javascript
+#: code:addons/encode_project_dashboard/static/src/xml/project_dashboard.xml:0
+msgid "Completion %"
+msgstr "نسبة الاكتمال"
+
+#. module: encode_project_dashboard
+#. odoo-javascript
+#: code:addons/encode_project_dashboard/static/src/xml/project_dashboard.xml:0
+msgid "Cost %"
+msgstr "نسبة التكلفة"
+
+#. module: encode_project_dashboard
+#. odoo-javascript
+#: code:addons/encode_project_dashboard/static/src/xml/project_dashboard.xml:0
+msgid "Create some projects to see them displayed in the dashboard."
+msgstr "قم بإنشاء بعض المشاريع لعرضها في لوحة البيانات."
+
+#. module: encode_project_dashboard
+#: model:ir.actions.client,name:encode_project_dashboard.action_project_dashboard
+#: model:ir.ui.menu,name:encode_project_dashboard.menu_project_dashboard
+msgid "Dashboard"
+msgstr "لوحة البيانات"
+
+#. module: encode_project_dashboard
+#. odoo-javascript
+#: code:addons/encode_project_dashboard/static/src/xml/project_dashboard.xml:0
+msgid "Done"
+msgstr "منتهي"
+
+#. module: encode_project_dashboard
+#. odoo-javascript
+#: code:addons/encode_project_dashboard/static/src/xml/project_dashboard.xml:0
+msgid "Error Loading Dashboard"
+msgstr "خطأ في تحميل لوحة البيانات"
+
+#. module: encode_project_dashboard
+#. odoo-javascript
+#: code:addons/encode_project_dashboard/static/src/xml/project_dashboard.xml:0
+msgid "Hours"
+msgstr "ساعات"
+
+#. module: encode_project_dashboard
+#. odoo-javascript
+#: code:addons/encode_project_dashboard/static/src/xml/project_dashboard.xml:0
+msgid "Loading project data..."
+msgstr "جاري تحميل بيانات المشروع..."
+
+#. module: encode_project_dashboard
+#. odoo-javascript
+#: code:addons/encode_project_dashboard/static/src/xml/project_dashboard.xml:0
+msgid "No Projects Found"
+msgstr "لم يتم العثور على أي مشاريع"
+
+#. module: encode_project_dashboard
+#: model:ir.model,name:encode_project_dashboard.model_project_project
+msgid "Project"
+msgstr "المشروع"
+
+#. module: encode_project_dashboard
+#. odoo-javascript
+#: code:addons/encode_project_dashboard/static/src/xml/project_dashboard.xml:0
+msgid "Project Dashboard"
+msgstr "لوحة بيانات المشروع"
+
+#. module: encode_project_dashboard
+#. odoo-javascript
+#: code:addons/encode_project_dashboard/static/src/xml/project_dashboard.xml:0
+msgid "Projects"
+msgstr "المشاريع"
+
+#. module: encode_project_dashboard
+#. odoo-javascript
+#: code:addons/encode_project_dashboard/static/src/xml/project_dashboard.xml:0
+msgid "Retry"
+msgstr "إعادة المحاولة"
+
+#. module: encode_project_dashboard
+#. odoo-javascript
+#: code:addons/encode_project_dashboard/static/src/xml/project_dashboard.xml:0
+msgid "SPI"
+msgstr "مؤشر الأداء الزمني"
+
+#. module: encode_project_dashboard
+#. odoo-javascript
+#: code:addons/encode_project_dashboard/static/src/xml/project_dashboard.xml:0
+msgid "Search projects..."
+msgstr "البحث عن المشاريع..."
+
+#. module: encode_project_dashboard
+#. odoo-javascript
+#: code:addons/encode_project_dashboard/static/src/xml/project_dashboard.xml:0
+msgid "Tasks"
+msgstr "المهام"
+
+#. module: encode_project_dashboard
+#. odoo-javascript
+#: code:addons/encode_project_dashboard/static/src/xml/project_dashboard.xml:0
+msgid "Try adjusting your search or filter criteria."
+msgstr "جرّب تعديل معايير البحث أو التصفية."

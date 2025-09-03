@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <!-- Place Dashboard before the default Projects menu -->
     <menuitem id="menu_project_dashboard_root"

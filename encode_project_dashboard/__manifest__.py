@@ -1,11 +1,29 @@
 {
     'name': 'Encode Project Dashboard',
-    'version': '1.0.0',
-    'summary': 'Dashboard with KPIs for projects (Completion, SPI, Cost Spent %).',
+    'version': '1.0',
     'category': 'Project',
+    'summary': 'Elegant project dashboard with ring charts',
+    'description': """
+        A modern and elegant project dashboard that displays:
+        - Completion percentage ring chart
+        - Schedule Performance Index (SPI) ring chart  
+        - Cost spent percentage ring chart
+        
+        Uses existing project fields for calculations.
+    """,
     'author': 'Encode',
-    'depends': ['project', 'hr_timesheet', 'analytic', 'encode_project_budget', 'encode_project_template'],
+    'contributors': [
+        'Mustafa Elian <mustafa3lian1@gmail.com>',
+    ],
+    'website': 'https://www.encode.com',
+    'depends': [
+        'project',
+        'hr_timesheet',
+        'web',
+        'encode_project_budget',
+    ],
     'data': [
+        'security/ir.model.access.csv',
         'views/project_dashboard_views.xml',
         'views/menus.xml',
     ],
@@ -16,7 +34,8 @@
             'encode_project_dashboard/static/src/xml/project_dashboard.xml',
         ],
     },
-    'license': 'LGPL-3',
+    'installable': True,
+    'auto_install': False,
     'application': False,
+    'license': 'LGPL-3',
 }
-
