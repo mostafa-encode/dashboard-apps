@@ -135,7 +135,7 @@
                     <div class="encode-indicator">
                         <i class="fa fa-hourglass-half encode-indicator-icon encode-indicator-icon-small"
                            t-att-class="project.allocated_hours > 0 ? 'text-secondary' : 'text-muted'"></i>
-                        <span class="encode-indicator-text" t-esc="project.allocated_hours"/>
+                        <span class="encode-indicator-text" t-esc="project.allocated_hours.toFixed(2)"/>
                         <span class="encode-indicator-label">Allocated</span>
                     </div>
 
@@ -143,7 +143,7 @@
                     <div class="encode-indicator">
                         <i class="fa fa-clock-o encode-indicator-icon"
                            t-att-class="project.total_time_spent > 0 ? 'text-info' : 'text-muted'"></i>
-                        <span class="encode-indicator-text" t-esc="project.total_time_spent"/>
+                        <span class="encode-indicator-text" t-esc="project.total_time_spent.toFixed(2)"/>
                         <span class="encode-indicator-label">Hours</span>
                     </div>
 
@@ -151,7 +151,7 @@
                     <div class="encode-indicator">
                         <i class="fa fa-money encode-indicator-icon"
                            t-att-class="project.budget_budgeted > 0 ? 'text-warning' : 'text-muted'"></i>
-                        <span class="encode-indicator-text" t-esc="project.budget_budgeted"/>
+                        <span class="encode-indicator-text" t-esc="project.budget_budgeted_formatted"/>
                         <span class="encode-indicator-label">Budget</span>
                     </div>
 
