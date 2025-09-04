@@ -6,9 +6,9 @@
         <field name="tag">project_dashboard</field>
     </record>
     <!-- Dashboard menu item -->
-<!--    <menuitem id="project_menu_open_Dashboard"-->
-<!--              name="Dashboard"-->
-<!--              action="project_dashboard_action"-->
-<!--              parent="project.menu_main_pm"-->
-<!--              sequence="0"/>-->
+    <menuitem id="project_menu_open_Dashboard"
+              name="Dashboard 2"
+              action="project_dashboard_action"
+              parent="project.menu_main_pm"
+              sequence="0"/>
 </odoo>

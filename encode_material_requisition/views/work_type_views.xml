@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_work_type_form" model="ir.ui.view">
+        <field name="name">work.type.form</field>
+        <field name="model">work.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_open_work_sub_types"
+                                type="object"
+                                string="Work Sub Types"
+                                icon="fa-tags"
+                                class="oe_stat_button">
+                            <field name="work_sub_type_count" string="Work Sub Types" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="work_sub_type_ids" widget="many2many_tags"
+                                   options="{'color_field': 'color'}"/>
+                        </group>
+                        <group>
+                            <field name="code"/>
+                            <field name="description"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_work_type_list" model="ir.ui.view">
+        <field name="name">work.type.list</field>
+        <field name="model">work.type</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="work_sub_type_ids" widget="many2many_tags"
+                       options="{'color_field': 'color'}"/>
+                <field name="code" optional="hide"/>
+                <field name="description" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_work_type" model="ir.actions.act_window">
+        <field name="name">Work Types</field>
+        <field name="res_model">work.type</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create work types to categorize tasks in requisition lines.</p>
+        </field>
+    </record>
+
+</odoo>

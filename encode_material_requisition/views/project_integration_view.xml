@@ -1,0 +1,21 @@
+<odoo>
+    <record id="view_project_form_inherit_requisition" model="ir.ui.view">
+        <field name="name">project.project.inherit.requisition</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@class='oe_button_box']" position="inside">
+                <button name="open_material_requisitions"
+                        type="object"
+                        class="oe_stat_button"
+                        context="{'default_project_id': id, 'search_default_project_id': id}"
+                        icon="fa-cubes">
+                    <field name="material_requisition_count" widget="statinfo" string="Material Requisitions"/>
+                </button>
+            </xpath>
+            <xpath expr="//page[@name='settings']/group[1]/group[2]" position="inside">
+                <field name="subcontractor_and_supervisor_ids" widget="many2many_tags" options="{'no_create': True, 'no_create_edit': True}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

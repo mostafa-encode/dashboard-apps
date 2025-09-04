@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_project_re_investor_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page" style="font-family: 'Tajawal'; font-size: 13px; direction: rtl;">
+                        <style>
+                            .data-main-header {
+                            background-color: #d2c2b8;
+                            }
+                            .data-header th {
+                            text-align: center;
+                            padding: 8px 0;
+                            color: #2e3541;
+                            font-weight: bold;
+                            }
+
+                            .data-child-header {
+                            background-color: #ccc;
+                            }
+                            .data-child-header td {
+                            font-weight: bold;
+                            color: #2e3541;
+                            }
+                        </style>
+
+                        <div style="text-align: center; font-size: 25px; font-weight: bold;">
+                            نسخة المستثمر
+                        </div>
+                        <br/>
+
+                        <!-- بيانات الأرض -->
+                        <table style="width:100%; border-collapse: collapse;text-align: center;">
+                            <thead>
+                                <!--                                <tr style="background-color: #eae3f2;">-->
+                                <tr class="data-main-header">
+                                    <th colspan="4" style="text-align: center;">بيانات الأرض</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="data-child-header">
+                                    <td>المشروع</td>
+                                    <td>الحي</td>
+                                    <td>النوع</td>
+                                    <td>الشارع</td>
+                                </tr>
+                                <tr>
+                                    <td t-esc="doc.name"/>
+                                    <td t-esc="doc.district"/>
+                                    <td t-esc="doc.type"/>
+                                    <td t-esc="doc.street"/>
+                                </tr>
+                                <tr class="data-child-header">
+                                    <td>العمق</td>
+                                    <td>العرض</td>
+                                    <td>المساحة</td>
+                                    <td>مسطحات البناء</td>
+                                </tr>
+                                <tr>
+                                    <td t-esc="'{:,.2f}'.format(doc.depth)"/>
+                                    <td t-esc="'{:,.2f}'.format(doc.width)"/>
+                                    <td t-esc="'{:,.2f}'.format(doc.area)"/>
+                                    <td t-esc="'{:,.2f}'.format(doc.surfaces_total)"/>
+                                </tr>
+                                <tr class="data-child-header">
+                                    <td width="25%">سعر المتر</td>
+                                    <td width="25%">الموقع</td>
+                                    <td width="25%">عدد الأدوار</td>
+                                    <td width="25%">عدد الفلل</td>
+                                </tr>
+                                <tr>
+                                    <td t-esc="'{:,.2f}'.format(doc.meter_price)"/>
+                                    <td style="max-width: 200px; white-space: normal; word-break: break-all; padding: 4px; text-align: center;">
+                                        <a t-att-href="doc.url_location"
+                                           t-esc="doc.url_location"
+                                           style="display: block; word-break: break-all; font-size: 10px; margin: 0 auto; padding: 0 2px;"/>
+                                    </td>
+                                    <td t-esc="doc.apartments_number"/>
+                                    <td t-esc="doc.villas_number"/>
+
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- التكاليف -->
+                        <table style="width:100%; border-collapse: collapse;text-align: center;margin-top: 10px;">
+                            <thead>
+                                <tr class="data-main-header">
+                                    <th colspan="4" style="text-align: center;">التكاليف</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="data-child-header">
+                                    <td>تكلفة الأرض</td>
+                                    <td>سعي الأرض</td>
+                                    <td>ضريبة التصرفات العقارية</td>
+                                    <td>إجمالي تكلفة الأرض</td>
+                                </tr>
+                                <tr>
+                                    <td t-esc="'{:,.2f}'.format(doc.land_cost)"/>
+                                    <td t-esc="'{:,.2f}'.format(doc.land_commission)"/>
+                                    <td t-esc="'{:,.2f}'.format(doc.re_transaction_tax)"/>
+                                    <td t-esc="'{:,.2f}'.format(doc.land_cost_total)"/>
+                                </tr>
+                                <tr class="data-child-header">
+                                    <td>متوقع تكلفة البناء</td>
+                                    <td>تكاليف حكومية وهندسية</td>
+                                    <td>الإشراف</td>
+                                    <td>تكلفة التمويل</td>
+                                </tr>
+                                <tr>
+                                    <td t-esc="'{:,.2f}'.format(doc.estimated_construction_cost)"/>
+                                    <td t-esc="'{:,.2f}'.format(doc.gov_eng_costs_dev)"/>
+                                    <td t-esc="'{:,.2f}'.format(doc.supervision_dev)"/>
+                                    <td t-esc="'{:,.2f}'.format(doc.financing_cost)"/>
+                                </tr>
+                                <tr class="data-child-header">
+                                    <td colspan="4">إجمالي التكلفة</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" t-esc="'{:,.2f}'.format(doc.total_cost)"/>
+                                </tr>
+                                <tr class="data-child-header">
+                                    <td colspan="4">متوسط تكلفة الدور</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" t-esc="'{:,.2f}'.format(doc.floor_avg_cost)"/>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                        <!-- الهيكلة المالية -->
+                        <table style="width:100%; border-collapse: collapse;text-align: center;margin-top: 10px;">
+                            <thead>
+                                <tr class="data-main-header">
+                                    <th colspan="4" style="text-align: center;">الهيكلة المالية</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="data-child-header">
+                                    <td colspan="2">رأس المال</td>
+                                    <td colspan="2">التمويل (يبدأ بعد صبة النظافة)</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" t-esc="'{:,.2f}'.format(doc.capital)"/>
+                                    <td colspan="2" t-esc="'{:,.2f}'.format(doc.financing)"/>
+                                </tr>
+                                <tr class="data-child-header">
+                                    <td>إجمالي مبالغ الشركة</td>
+                                    <td>إجمالي مبالغ المستثمرين</td>
+                                    <td>التمويل</td>
+                                    <td>نسبة التمويل</td>
+                                </tr>
+                                <tr>
+                                    <td t-esc="'{:,.2f}'.format(doc.total_company_amounts)"/>
+                                    <td t-esc="'{:,.2f}'.format(doc.total_investor_amounts)"/>
+                                    <td t-esc="'{:,.2f}'.format(doc.capital)"/>
+                                    <td t-esc="'{:,.2f}'.format(doc.financing)"/>
+                                </tr>
+                                <tr>
+                                    <td>  % 0  </td>
+                                    <td> % 100  </td>
+                                    <td> صكوك </td>
+                                    <td> % 100  </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"> % 67  </td>
+                                    <td colspan="2"> % 33  </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                        <!-- بيانات المبيعات -->
+                        <table style="width:100%; border-collapse: collapse;text-align: center;margin-top: 10px;">
+                            <thead>
+                                <tr class="data-main-header">
+                                    <th colspan="4" style="text-align: center;">بيانات المبيعات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="data-child-header">
+                                    <td colspan="2">متوسط سعر الدور</td>
+                                    <td colspan="2">اجمالي المبيعات</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" t-esc="'{:,.2f}'.format(doc.avg_floor_price_incl_commission)"/>
+                                    <td colspan="2" t-esc="'{:,.2f}'.format(doc.sales_total)"/>
+                                </tr>
+                                <tr class="data-child-header">
+                                    <td colspan="2">صافي الأرباح</td>
+                                    <td colspan="2">نسبة الأرباح للمشروع</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" t-esc="'{:,.2f}'.format(doc.profits_total)"/>
+                                    <td colspan="2" t-esc="'{:,.2f}'.format(doc.project_profit_margin)"/>
+                                </tr>
+                                <tr class="data-child-header">
+                                    <td colspan="2">نسبة الأرباح على رأس المال</td>
+                                    <td colspan="2">نسبة أرباح المستثمرين</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" t-esc="'{:,.2f}'.format(doc.capital_gains_rate)"/>
+                                    <td colspan="2" t-esc="'{:,.2f}'.format(doc.investor_profit_percent)"/>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+
+</odoo>

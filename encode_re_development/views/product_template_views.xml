@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_product_template_form_real_estate" model="ir.ui.view">
+        <field name="name">product.template.real.estate.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="priority">1000</field>
+        <field name="arch" type="xml">
+            <!-- Add is_unit after can_be_expensed -->
+            <div name="options" position="inside">
+                <span class="d-inline-flex">
+                    <field name="is_unit"/>
+                    <label for="is_unit"/>
+                </span>
+            </div>
+            <!-- Hide fields when is_unit = True -->
+            <xpath expr="//field[@name='standard_price']" position="attributes">
+                <attribute name="invisible">is_unit</attribute>
+                <attribute name="readonly">1</attribute>
+            </xpath>
+
+            <!-- Add calculated cost note -->
+            <xpath expr="//field[@name='standard_price']" position="after">
+                <field name="cost_calculation_note" readonly="1" widget="text" invisible="is_unit" 
+                       style="color: #6c757d; font-style: italic; font-size: 0.9em;"/>
+                <button name="action_recalculate_cost" 
+                        type="object" 
+                        string="🔄 Recalc" 
+                        class="btn-sm btn-outline-secondary"
+                        invisible="is_unit"
+                        style="font-size: 0.8em; padding: 2px 8px; margin-left: 10px;"/>
+                <field name="vendor_bill_count" readonly="1" invisible="1"/>
+                <field name="cost_calculation_date_from" readonly="1" invisible="1"/>
+                <field name="cost_calculation_date_to" readonly="1" invisible="1"/>
+            </xpath>
+
+            <!-- Add new tab -->
+            <xpath expr="//notebook" position="inside">
+                <page name="unit_tab" string="Unit" invisible="not is_unit">
+                    <!-- Identification & Structure -->
+                    <group string="Identification &amp; Structure">
+                        <group>
+                            <field name="project_name_id" required="is_unit"/>
+                            <field name="floor_number"/>
+                            <field name="unit_type" required="is_unit"/>
+                        </group>
+                        <group>
+                            <field name="unit_category"/>
+                            <field name="unit_status"/>
+                        </group>
+                    </group>
+
+                    <!-- Area & Rooms -->
+                    <group string="Area &amp; Rooms">
+                        <group>
+                            <field name="plot_area"/>
+                            <field name="built_up_area"/>
+                            <field name="bedrooms"/>
+                            <field name="bathrooms"/>
+                        </group>
+                        <group>
+                            <field name="maid_room"/>
+                            <field name="balcony"/>
+                            <field name="balcony_area"/>
+                            <field name="parking"/>
+                            <field name="parking_numbers" invisible="not parking"/>
+                        </group>
+                    </group>
+
+                    <!-- Location & View -->
+                    <group string="Location &amp; View">
+                        <group>
+                            <field name="city"/>
+                            <field name="district"/>
+                            <field name="zone"/>
+                        </group>
+                        <group>
+                            <field name="street_name"/>
+                            <field name="orientation"/>
+                        </group>
+                    </group>
+
+                    <!-- Financial Info -->
+                    <group string="Financial Info">
+                        <group>
+                            <field name="list_price"
+                                   class="oe_inline"
+                                   widget="monetary"
+                                   options="{'currency_field': 'currency_id', 'field_digits': True}"/>
+                        </group>
+                        <group>
+                            <field name="price_per_m2"/>
+                        </group>
+                    </group>
+
+                    <!-- Legal & Delivery -->
+                    <group string="Legal &amp; Delivery">
+                        <group>
+                            <field name="title_deed_number"/>
+                            <field name="title_deed_type"/>
+                            <field name="municipal_license_no"/>
+                        </group>
+                        <group>
+                            <field name="construction_permit_no"/>
+                            <field name="warranty_period"/>
+                        </group>
+                    </group>
+
+                    <!-- Media & Attachments -->
+                    <group string="Media &amp; Attachments">
+                        <group>
+                            <field name="blueprints" widget="many2many_binary"/>
+                            <field name="video_tour_url" widget="url"/>
+                        </group>
+                        <group>
+                            <field name="unit_photos" widget="many2many_binary"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+
+
+        </field>
+    </record>
+
+    <!-- List view to show calculated costs -->
+    <record id="view_product_template_list_with_calculated_cost" model="ir.ui.view">
+        <field name="name">product.template.list.with.calculated.cost</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="vendor_bill_count"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Search view to filter by calculated cost -->
+    <record id="view_product_template_search_with_calculated_cost" model="ir.ui.view">
+        <field name="name">product.template.search.with.calculated.cost</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="vendor_bill_count"/>
+            </xpath>
+            <xpath expr="//filter[@name='type']" position="after">
+                <filter string="Has Auto-Calculated Cost" name="has_auto_calculated_cost" domain="[('standard_price', '>', 0), ('vendor_bill_count', '>', 0)]"/>
+                <filter string="No Vendor Bills" name="no_vendor_bills" domain="[('vendor_bill_count', '=', 0)]"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

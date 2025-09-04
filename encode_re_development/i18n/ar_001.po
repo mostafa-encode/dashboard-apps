@@ -1,0 +1,1376 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* encode_re_development
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-23 12:11+0000\n"
+"PO-Revision-Date: 2025-07-23 12:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: encode_re_development
+#: model:ir.actions.report,print_report_name:encode_re_development.action_project_re_investor_report
+msgid ""
+"\n"
+"            'Investor Version - %s' % (object.name).replace('/', '')\n"
+"        "
+msgstr "'نسخة المستثمر - %s' % (object.name).replace('/', '')"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "% 100"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "% 33"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "% 67"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.actions.report,print_report_name:encode_re_development.action_project_re_developer_report
+msgid "'RE Developer Version - %s' % (object.name).replace('/', '')"
+msgstr "'نسخة المطور - %s' % (object.name).replace('/', '')"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__ac_type
+msgid "AC Type"
+msgstr "نوع المكيف"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__product_template__unit_type__apartment
+msgid "Apartment"
+msgstr "شقة"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__apartments_number
+msgid "Apartments Number"
+msgstr "عدد الشقق"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.view_product_template_form_real_estate
+msgid "Area & Rooms"
+msgstr "المساحة والغرف"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__product_template__unit_status__available
+#: model:ir.model.fields.selection,name:encode_re_development.selection__project_project__basement__available
+msgid "Available"
+msgstr "متاح"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__average_areas
+msgid "Average Areas"
+msgstr "متوسط المساحات"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__avg_floor_price_excl_commission
+msgid "Avg. Floor Price (Excl. Commission)"
+msgstr "متوسط سعر الدور (بدون السعي)"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__avg_floor_price_incl_commission
+msgid "Avg. Floor Price (Incl. Commission)"
+msgstr "متوسط سعر الدور (مع السعي)"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__balcony
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__balcony
+msgid "Balcony"
+msgstr "شرفة"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__balcony_area
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__balcony_area
+msgid "Balcony Area (m²)"
+msgstr "مساحة الشرفة (م²)"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__basement
+msgid "Basement"
+msgstr "القبو"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__bathrooms
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__bathrooms
+msgid "Bathrooms"
+msgstr "عدد دورات المياه"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__bedrooms
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__bedrooms
+msgid "Bedrooms"
+msgstr "عدد غرف النوم"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__blueprints
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__blueprints
+msgid "Blueprints"
+msgstr "المخططات"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__product_template__unit_status__booked
+msgid "Booked"
+msgstr "محجوز"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__built_up_area
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__built_up_area
+msgid "Built-up Area (m²)"
+msgstr "(م²) المساحة المبنية"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__project_project__status__cancelled
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__capital
+msgid "Capital"
+msgstr "رأس المال"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__capital_gains_rate
+msgid "Capital Gains Rate (%)"
+msgstr "نسبة الأرباح على رأس المال"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__city
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__city
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__city
+msgid "City"
+msgstr "المدينة"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__product_template__unit_category__commercial
+msgid "Commercial"
+msgstr "تجاري"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__company_investment_profits
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__company_investment_profits_for_input
+msgid "Company Investment Profits"
+msgstr "أرباح استثمار الشركة"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+msgid "Company Profits"
+msgstr "ارباح الشركة"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__company_share
+msgid "Company Share"
+msgstr "حصة الشركة"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+msgid "Company Statements"
+msgstr "بيان أرباح الشركة"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+msgid "Complete"
+msgstr "اكتمل"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__project_project__status__completed
+msgid "Completed"
+msgstr "اكتمل"
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__lower_factor
+msgid "Computed as: (3 × (Width - 4)) / The Area"
+msgstr "المعادلة: (3* (العرض - 4) / المساحة)"
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__project_profit_margin
+msgid "Computed as: (Sales Total ÷ Total Cost) − 1"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__avg_floor_price_excl_commission
+msgid "Computed as: Avg. Floor Price Incl. Commission ÷ 1.025"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__investor_profit_percent
+msgid "Computed as: Capital Gains Rate × 85%"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__total_company_amounts
+msgid "Computed as: Company Share × Capital"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__construction_cost_per_meter
+msgid "Computed as: Cost per Meter × Surfaces Total"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__area
+msgid "Computed as: Depth × Width"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__financing
+msgid "Computed as: Estimated Construction + Gov/Eng Costs + Supervision"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__total_cost
+msgid ""
+"Computed as: Estimated Construction + Land Cost Total + Gov/Eng Costs + "
+"Supervision + Financing"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__gov_eng_costs_dev
+msgid "Computed as: Government & Engineering Costs × Apartments Number"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__investor_profits
+msgid "Computed as: Investor Profit Percentage × 85%"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__total_investor_amounts
+msgid "Computed as: Investors Share × Capital"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__land_cost_total
+msgid "Computed as: Land Cost + Commission + RE Transaction Tax"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__capital
+msgid "Computed as: Land Cost Total + Financing Cost"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__land_commission
+msgid "Computed as: Land Cost × 2.5%"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__re_transaction_tax
+msgid "Computed as: Land Cost × 5%"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__total_lower_surfaces
+msgid "Computed as: Lower Factor × The Area"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__land_cost
+msgid "Computed as: Meter Price × The Area"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__investment_mgmt_fee
+msgid "Computed as: Profits Total × 15%"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__capital_gains_rate
+msgid "Computed as: Profits Total ÷ Capital"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__dev_marketing_striving
+msgid "Computed as: Sales Total × 2.5%"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__profits_total
+msgid "Computed as: Sales Total − Total Cost"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__supervision_dev
+msgid "Computed as: Supervision % × (Est. Construction + Gov/Eng Costs)"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__surfaces_factor
+msgid "Computed as: Surfaces Total ÷ The Area"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__diff_meter_price
+msgid "Computed as: The Area × (Meter Price − Price for Shareholders)"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__company_investment_profits
+msgid "Computed as: Total Company Amounts × Investor Profit %"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__floor_avg_cost
+msgid "Computed as: Total Cost ÷ Apartments Number"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__average_areas
+msgid "Computed as: Total Sales Area ÷ Apartments Number"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__sales_area_factor
+msgid "Computed as: Total Sales Area ÷ The Area"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__surfaces_total
+msgid "Computed as: Total Upper Surfaces + Total Lower Surfaces"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__total_sales_area
+msgid "Computed as: Total Upper Surfaces × 0.85"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__total_upper_surfaces
+msgid "Computed as: Upper Factor × The Area"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__estimated_construction_cost
+msgid "Computed as: Villa Construction Cost"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__apartments_number
+msgid "Computed as: Villas Number * 3"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__villa_construction_cost
+msgid "Computed as: Villas Number × Villa Cost"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__construction_cost_per_meter
+msgid "Construction Cost per Meter"
+msgstr "تكلفة البناء بالمتر"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__construction_permit_no
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__construction_permit_no
+msgid "Construction Permit No."
+msgstr "رقم تصريح البناء"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__dev_supervision
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__dev_supervision_for_input
+msgid "Construction Supervision for Developer"
+msgstr "إشراف البناء للمطور"
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__dev_supervision
+msgid "Copied from: Supervision (Dev)"
+msgstr "نسخ من: الإشراف"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__cost_per_meter
+msgid "Cost per Meter"
+msgstr "تكلفة المتر"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+msgid "Costs"
+msgstr "التكاليف"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__country
+msgid "Country"
+msgstr "الدولة"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__depth
+msgid "Depth"
+msgstr "العمق"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__dev_marketing_striving
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__dev_marketing_striving_for_input
+msgid "Developer Marketing Striving"
+msgstr "سعي التسويق للمطور"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__diff_meter_price
+msgid "Different Meter Price in Land Purchase"
+msgstr "فرق سعر المتر في شراء الأرض"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__district
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__district
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__district
+msgid "District"
+msgstr "الحي"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__product_template__unit_type__duplex
+msgid "Duplex"
+msgstr "ديوبليكس"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__product_template__orientation__east
+msgid "Eastern"
+msgstr "شرقية"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__estimated_construction_cost
+msgid "Estimated Construction Cost"
+msgstr "متوقع تكلفة البناء"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+msgid "Feasibility Study"
+msgstr "دراسة الجدوى"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.view_product_template_form_real_estate
+msgid "Financial Info"
+msgstr "المعلومات المالية"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+msgid "Financial Restructuring"
+msgstr "الهيكلة المالية"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__financing
+msgid "Financing"
+msgstr "التمويل"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__financing_cost
+msgid "Financing Cost"
+msgstr "تكلفة التمويل"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__financing_rate
+msgid "Financing Rate"
+msgstr "نسبة التمويل"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__product_template__unit_type__floor
+msgid "Floor"
+msgstr "دور"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__floor_avg_cost
+msgid "Floor Average Cost"
+msgstr "متوسط تكلفة الدور"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__floor_number
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__floor_number
+msgid "Floor Number"
+msgstr "رقم الطابق"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__project_project__type__floors
+msgid "Floors"
+msgstr "ادوار"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__product_template__title_deed_type__freehold
+msgid "Freehold"
+msgstr "ملكية حرة"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+msgid "Geolocation"
+msgstr "الموقع الجغرافي"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__gov_eng_costs_dev
+msgid "Gov. & Eng. Costs (Dev)"
+msgstr "التكاليف الحكومية والهندسية"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__government_engineering_costs
+msgid "Government and Engineering Costs"
+msgstr "تكاليف حكومية وهندسية"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__project_project__ac_type__hide
+msgid "Hide"
+msgstr "مخفي"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.view_product_template_form_real_estate
+msgid "Identification & Structure"
+msgstr "التعريف والبنية"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__project_project__status__in_progress
+msgid "In Progress"
+msgstr "تحت التنفيذ"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+msgid "Inputs"
+msgstr "المدخلات"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__investment_mgmt_fee_for_input
+msgid "Investment Management Fee"
+msgstr "أتعاب إدارة الاستثمار"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__investment_mgmt_fee
+msgid "Investment Management Fee 15%"
+msgstr "أتعاب إدارة الاستثمار 15%"
+
+#. module: encode_re_development
+#: model:ir.actions.report,name:encode_re_development.action_project_re_investor_report
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+msgid "Investor PDF"
+msgstr "نسخة المستثمر"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__investor_profit_percent
+msgid "Investor Profit Percentage (%)"
+msgstr "نسبة أرباح المستثمرين"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__investor_profits
+msgid "Investor Profits"
+msgstr "أرباح المستثمرين"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__investors_share
+msgid "Investors Share"
+msgstr "حصة المستثمرين"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__plot_area
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__plot_area
+msgid "Land Area (m²)"
+msgstr "(م²) مساحة الأرض"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__land_commission
+msgid "Land Commission"
+msgstr "سعي الأرض"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__land_cost
+msgid "Land Cost"
+msgstr "تكلفة الأرض"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__land_cost_total
+msgid "Land Cost Total"
+msgstr "إجمالي تكلفة الأرض"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+msgid "Land Data"
+msgstr "بيانات الأرض"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__latitude
+msgid "Latitude"
+msgstr "خط الطول"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__product_template__title_deed_type__leasehold
+msgid "Leasehold"
+msgstr "عقد إيجار"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.view_product_template_form_real_estate
+msgid "Legal & Delivery"
+msgstr "الخدمات القانونية والتسليم"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.view_product_template_form_real_estate
+msgid "Location & View"
+msgstr "الموقع والمنظر"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__longitude
+msgid "Longitude"
+msgstr "خط العرض"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__lower_factor
+msgid "Lower Factor"
+msgstr "المعامل السفلي"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__maid_room
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__maid_room
+msgid "Maid Room"
+msgstr "غرفة خادمة"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+msgid "Map"
+msgstr "الخريطة"
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_product_product__is_unit
+#: model:ir.model.fields,help:encode_re_development.field_product_template__is_unit
+msgid "Mark as real estate unit"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.view_product_template_form_real_estate
+msgid "Media & Attachments"
+msgstr "الوسائط والمرفقات"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__meter_price
+msgid "Meter Price"
+msgstr "سعر المتر"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__meter_price_for_shareholders
+msgid "Meter Price for shareholders"
+msgstr "سعر المتر على المساهمين"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__municipal_license_no
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__municipal_license_no
+msgid "Municipal License No."
+msgstr "رقم الرخصة البلدية"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__project_project__status__new
+msgid "New"
+msgstr "جديد"
+
+#. module: encode_re_development
+#. odoo-python
+#: code:addons/encode_re_development/models/project_project.py:0
+msgid "No location data available."
+msgstr "لا تتوفر بيانات الموقع"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__product_template__orientation__north
+msgid "Northern"
+msgstr "شمالية"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__project_project__status__on_hold
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+msgid "On Hold"
+msgstr "معلق"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__orientation
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__orientation
+msgid "Orientation"
+msgstr "واجهة الوحدة"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__parking
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__parking
+msgid "Parking Available?"
+msgstr "يوجد مواقف سيارات؟"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__parking_numbers
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__parking_numbers
+msgid "Parking Numbers"
+msgstr "عدد مواقف السيارات"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+msgid "Planned Date"
+msgstr "تاريخ البداية والنهاية"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__price_per_m2
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__price_per_m2
+msgid "Price per m²"
+msgstr "السعر لكل متر مربع"
+
+#. module: encode_re_development
+#: model:ir.model,name:encode_re_development.model_product_template
+msgid "Product"
+msgstr "المنتج "
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__profits_total
+msgid "Profits Total"
+msgstr "اجمالي الأرباح"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+msgid "Progress"
+msgstr "بدء المشروع"
+
+#. module: encode_re_development
+#: model:ir.model,name:encode_re_development.model_project_project
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__project_name_id
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__project_name_id
+msgid "Project"
+msgstr "اسم المشروع"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+msgid "Project Location"
+msgstr "موقع المشروع"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__project_profit_margin
+msgid "Project Profit Margin (%)"
+msgstr "نسبة الأرباح للمشروع"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+msgid "RE Developer"
+msgstr "نسخة المطور"
+
+#. module: encode_re_development
+#: model:ir.actions.report,name:encode_re_development.action_project_re_developer_report
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+msgid "RE Developer PDF"
+msgstr "نسخة المطور"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__re_transaction_tax
+msgid "RE Transaction Tax"
+msgstr "ضريبة التصرفات العقارية"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__product_template__unit_category__residential
+msgid "Residential"
+msgstr "سكني"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__product_template__unit_category__both
+msgid "Residential and Commercial"
+msgstr "سكنية وتجارية"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__sales_area_factor
+msgid "Sales Area Factor"
+msgstr "المعامل"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+msgid "Sales Data"
+msgstr "بيانات المبيعات"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__sales_total
+msgid "Sales Total"
+msgstr "اجمالي المبيعات"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+msgid "Set To New"
+msgstr "اعادة لحالة جديد"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__show_map_button
+msgid "Show Map Button"
+msgstr "عرض زر الخريطة"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__product_template__unit_status__sold
+msgid "Sold"
+msgstr "مُباع"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__product_template__orientation__south
+msgid "Southern"
+msgstr "جنوبية"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__project_project__ac_type__split
+msgid "Split"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__stakeholder_ids
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.view_project_project_filter_re_development
+msgid "Stakeholders"
+msgstr "المشاركون في المشروع"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__state
+msgid "State"
+msgstr "الولاية"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__status
+msgid "Status"
+msgstr "الحالة"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__street
+msgid "Street"
+msgstr "الشارع"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__street_name
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__street_name
+msgid "Street Name"
+msgstr "الشارع"
+
+#. module: encode_re_development
+#: model:ir.model.fields,help:encode_re_development.field_project_project__total_dev_earnings
+msgid ""
+"Sum of: Company Profits + Mgmt Fee + Marketing Striving + Developer "
+"Supervision + Meter Price Difference"
+msgstr ""
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__supervision_percent
+msgid "Supervision (%)"
+msgstr "الإشراف"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__supervision_dev
+msgid "Supervision (Dev)"
+msgstr "الإشراف"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__surfaces_factor
+msgid "Surfaces Factor"
+msgstr "المعامل"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__surfaces_total
+msgid "Surfaces Total"
+msgstr "المعامل"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__template_id
+msgid "Template"
+msgstr "قالب المشروع"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__area
+msgid "The Area"
+msgstr "المساحة"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__the_bank
+msgid "The Bank"
+msgstr "البنك"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.edit_project_re_development
+msgid "The Costs"
+msgstr "التكاليف"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__title_deed_number
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__title_deed_number
+msgid "Title Deed Number"
+msgstr "رقم صك الملكية"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__title_deed_type
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__title_deed_type
+msgid "Title Deed Type"
+msgstr "نوع صك الملكية"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__total_company_amounts
+msgid "Total Company Amounts"
+msgstr "إجمالي مبالغ الشركة"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__total_cost
+msgid "Total Cost"
+msgstr "إجمالي التكلفة"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__total_dev_earnings
+msgid "Total Developer Earnings"
+msgstr "إجمالي أرباح المطور"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__total_investor_amounts
+msgid "Total Investor Amounts"
+msgstr "إجمالي مبالغ المستثمرين"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__total_lower_surfaces
+msgid "Total Lower Surfaces"
+msgstr "إجمالي المسطحات السفلية"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__total_sales_area
+msgid "Total Sales Area"
+msgstr "إجمالي المساحات البيعية"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__total_upper_surfaces
+msgid "Total Upper Surfaces"
+msgstr "إجمالي المسطحات العلوية"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__url_location
+msgid "URL Location"
+msgstr "رابط الموقع"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__project_project__basement__unavailable
+msgid "Unavailable"
+msgstr "لا يوجد"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__is_unit
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__is_unit
+#: model_terms:ir.ui.view,arch_db:encode_re_development.view_product_template_form_real_estate
+msgid "Unit"
+msgstr "وحدة"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__unit_category
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__unit_category
+msgid "Unit Category"
+msgstr "فئة الوحدة"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__unit_photos
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__unit_photos
+msgid "Unit Photos"
+msgstr "صور الوحدة"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__unit_status
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__unit_status
+msgid "Unit Status"
+msgstr "حالة الوحدة"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__unit_type
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__unit_type
+msgid "Unit Type"
+msgstr "نوع الوحدة"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__upper_factor
+msgid "Upper Factor"
+msgstr "المعامل العلوي"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__video_tour_url
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__video_tour_url
+msgid "Video Tour URL"
+msgstr "رابط جولة الفيديو"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__product_template__unit_type__villa
+msgid "Villa"
+msgstr "فيلا"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__villa_construction_cost
+msgid "Villa Construction Cost"
+msgstr "تكلفة البناء الفيلا"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__villa_cost
+msgid "Villa Cost"
+msgstr "تكلفة الفيلا"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__villas_number
+msgid "Villas Number"
+msgstr "عدد الفلل"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__warranty_period
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__warranty_period
+msgid "Warranty Period"
+msgstr "فترة الضمان"
+
+#. module: encode_re_development
+#: model:ir.model.fields.selection,name:encode_re_development.selection__product_template__orientation__west
+msgid "Western"
+msgstr "غربية"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__width
+msgid "Width"
+msgstr "العرض"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_project_project__zip
+msgid "ZIP"
+msgstr "الرمز البريدي"
+
+#. module: encode_re_development
+#: model:ir.model.fields,field_description:encode_re_development.field_product_product__zone
+#: model:ir.model.fields,field_description:encode_re_development.field_product_template__zone
+msgid "Zone"
+msgstr "المنطقة"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.view_product_template_form_real_estate
+msgid "per"
+msgstr "لكل"
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+msgid "أتعاب إدارة الاستثمار 15%"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+msgid "أرباح استثمار الشركة"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+msgid "أرباح المستثمرين"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+msgid "إجمالي أرباح المطور:"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+msgid "إجمالي الأرباح"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "إجمالي التكلفة"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+msgid "إجمالي المبيعات"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "إجمالي تكلفة الأرض"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "إجمالي مبالغ الشركة"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "إجمالي مبالغ المستثمرين"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+msgid "إشراف البناء للمطور"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "اجمالي المبيعات"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "الإشراف"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "التكاليف"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+msgid "التكييف"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "التمويل"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "التمويل (يبدأ بعد صبة النظافة)"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "الحي"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "الشارع"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "العرض"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "العمق"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+msgid "القبو"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "المساحة"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+msgid "المسطحات البيعية"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "المشروع"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "الموقع"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "النوع"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "الهيكلة المالية"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+msgid "بيان أرباح الشركة"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "بيانات الأرض"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "بيانات المبيعات"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "تكاليف حكومية وهندسية"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "تكلفة الأرض"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+msgid "تكلفة البناء الفيلا"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+msgid "تكلفة البناء بالمتر"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "تكلفة التمويل"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "رأس المال"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+msgid "سعر التسويق للمطور"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "سعر المتر"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "سعي الأرض"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "صافي الأرباح"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "صكوك"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "ضريبة التصرفات العقارية"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "عدد الأدوار"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+msgid "عدد الشقق"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "عدد الفلل"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+msgid "فرق سعر المتر في شراء الأرض"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "متوسط تكلفة الدور"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "متوسط سعر الدور"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+msgid "متوسط سعر الدور (بدون السعر)"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+msgid "متوسط سعر الدور (مع السعر)"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+msgid "متوسط مساحات الشقق"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "متوقع تكلفة البناء"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "مسطحات البناء"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "نسبة أرباح المستثمرين"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "نسبة الأرباح على رأس المال"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "نسبة الأرباح للمشروع"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "نسبة التمويل"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_investor_document
+msgid "نسخة المستثمر"
+msgstr ""
+
+#. module: encode_re_development
+#: model_terms:ir.ui.view,arch_db:encode_re_development.report_project_re_developer_document
+msgid "نسخة المطور"
+msgstr ""

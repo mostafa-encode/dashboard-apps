@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_project_re_investor_report" model="ir.actions.report">
+        <field name="name">Investor PDF</field>
+        <field name="model">project.project</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">encode_re_development.report_project_re_investor_document</field>
+        <field name="report_file">encode_re_development.report_project_re_investor_document</field>
+        <!--        <field name="binding_model_id" ref="project.model_project_project"/>-->
+        <field name="binding_model_id" eval="False"/>
+        <field name="print_report_name">
+            'Investor Version - %s' % (object.name).replace('/', '')
+        </field>
+    </record>
+</odoo>

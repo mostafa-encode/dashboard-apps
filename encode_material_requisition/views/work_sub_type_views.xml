@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_work_sub_type_form" model="ir.ui.view">
+        <field name="name">work.sub.type.form</field>
+        <field name="model">work.sub.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="work_type_id"/>
+                            <field name="description"/>
+                        </group>
+                        <group>
+                            <field name="color" widget="color_picker"/>
+                            <field name="code"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_work_sub_type_list" model="ir.ui.view">
+        <field name="name">work.sub.type.list</field>
+        <field name="model">work.sub.type</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="work_type_id"/>
+
+                <field name="code" optional="hide"/>
+                <field name="color" widget="color_picker" optional="hide"/>
+                <field name="description" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_work_sub_type" model="ir.actions.act_window">
+        <field name="name">Work Sub Types</field>
+        <field name="res_model">work.sub.type</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create work sub types to categorize tasks in requisition lines.</p>
+        </field>
+    </record>
+
+</odoo>

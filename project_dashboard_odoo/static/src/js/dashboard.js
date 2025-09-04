@@ -6,29 +6,30 @@ import { rpc } from "@web/core/network/rpc";
 import { _t } from "@web/core/l10n/translation";
 import { onMounted, useRef, useState} from "@odoo/owl";
 
-export class ProjectDashboard extends Component {
+export class ProjectDashboardComponent extends Component {
     /**
      * Setup method to initialize required services and register event handlers.
      */
 	setup() {
-		this.action = useService("action");
-		this.orm = useService("orm");
-		this.project_task_doughnut = useRef("project_task_doughnut");
-		this.project_doughnut = useRef("project_doughnut");
-		this.project_selection = useRef("project_selection");
-		this.start_date = useRef("start_date");
-		this.end_date = useRef("end_date");
-		this.tot_project = useRef("tot_project");
-		this.tot_employee = useRef("tot_employee");
-		this.tot_hrs = useRef("tot_hrs");
-		this.tot_margin = useRef("tot_margin");
-		this.total_task = useRef("tot_task");
-		this.total_so = useRef("tot_so");
-		this.employee_selection = useRef("employee_selection");
-		this.top_selling_employees = useRef("top_selling_employees");
-		this.material_requisitions_status = useRef("material_requisitions_status");
-		this.gantt_chart = useRef("gantt_chart");
-		this.rfq_cumulative_chart = useRef("rfq_cumulative_chart");
+        this.action = useService("action");
+        this.orm = useService("orm");
+
+        this.project_task_doughnut = useRef("project_task_doughnut");
+        this.project_doughnut = useRef("project_doughnut");
+        this.project_selection = useRef("project_selection");
+        this.start_date = useRef("start_date");
+        this.end_date = useRef("end_date");
+        this.tot_project = useRef("tot_project");
+        this.tot_employee = useRef("tot_employee");
+        this.tot_hrs = useRef("tot_hrs");
+        this.tot_margin = useRef("tot_margin");
+        this.total_task = useRef("tot_task");
+        this.total_so = useRef("tot_so");
+        this.employee_selection = useRef("employee_selection");
+        this.top_selling_employees = useRef("top_selling_employees");
+        this.material_requisitions_status = useRef("material_requisitions_status");
+        this.gantt_chart = useRef("gantt_chart");
+        this.rfq_cumulative_chart = useRef("rfq_cumulative_chart");
 
 
 		this.state = useState({
@@ -37,15 +38,14 @@ export class ProjectDashboard extends Component {
             stages: '',
         });
 
-		this.rpc = this.env.services.rpc
-		onWillStart(async () => {
-		    await this.willStart();
-		});
+        onWillStart(async () => {
+            await this.willStart();
+        });
 
-		onMounted(async () => {
-		    await this.mounted()
-		});
-	}
+        onMounted(async () => {
+            await this.mounted();
+        });
+    }
 
 
 	/**
@@ -543,46 +543,6 @@ export class ProjectDashboard extends Component {
 
 
 	/**
-     * Event handler to open a list of employees and display them to the user.
-     */
-	tot_emp(e) {
-		e.stopPropagation();
-		e.preventDefault();
-		var options = {
-			on_reverse_breadcrumb: this.on_reverse_breadcrumb,
-		};
-		if (this.flag == 0) {
-			this.action.doAction({
-				name: _t("Employees"),
-				type: 'ir.actions.act_window',
-				res_model: 'hr.employee',
-				view_mode: 'tree,form',
-				views: [
-					[false, 'list'],
-					[false, 'form']
-				],
-				target: 'current'
-			}, options)
-		} else {
-			this.action.doAction({
-				name: _t("Employees"),
-				type: 'ir.actions.act_window',
-				res_model: 'hr.employee',
-				domain: [
-					["id", "in", this.tot_employee]
-				],
-				view_mode: 'tree,form',
-				views: [
-					[false, 'list'],
-					[false, 'form']
-				],
-				target: 'current'
-			}, options)
-		}
-	}
-
-
-	/**
 	function for getting values when page is loaded
 	*/
 	fetch_data() {
@@ -821,5 +781,5 @@ export class ProjectDashboard extends Component {
 
 }
 
-ProjectDashboard.template = "ProjectDashboard"
-registry.category("actions").add("project_dashboard", ProjectDashboard)
+ProjectDashboardComponent.template = "ProjectDashboardTemp"
+registry.category("actions").add("project_dashboard", ProjectDashboardComponent)

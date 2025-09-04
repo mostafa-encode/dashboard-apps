@@ -2,12 +2,13 @@
 <!-- Template for the project dashboard -->
 <templates id="template" xml:space="preserve">
 
-    <t t-name="ProjectDashboard">
+
+    <t t-name="ProjectDashboardTemp">
         <div class="oh_dashboards"
              style="margin-top: 20px; overflow-y: scroll;vertical-align: middle;overflow-x: clip;max-height: -webkit-fill-available;">
             <div class="container-fluid o_pj_dashboard"
                  style="margin-left:4%;">
-                <t t-call="DashboardFilter"/>
+                <t t-call="DashboardFilterItems"/>
                 <!--                <t t-call="DashboardProject"/>-->
                 <!--                <t t-call="DashboardChart"/>-->
                 <t t-call="FullDashboardChart"/>
@@ -16,7 +17,7 @@
     </t>
 
     <!-- Template for filter items -->
-    <t t-name="DashboardFilter">
+    <t t-name="DashboardFilterItems">
         <!-- Template for filter items -->
         <div class="row main-section">
             <!-- Filters -->

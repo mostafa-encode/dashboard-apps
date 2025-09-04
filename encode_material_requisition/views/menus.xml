@@ -1,0 +1,29 @@
+<odoo>
+
+    <menuitem id="menu_material_requisition_root"
+              name="Material Requisition"
+              parent="project.menu_main_pm"
+              sequence="30"/>
+
+    <menuitem id="menu_material_requisition"
+              name="Material Requisitions"
+              parent="menu_material_requisition_root"
+              action="action_material_requisition"
+              sequence="10"/>
+
+    <menuitem id="menu_project_work_type_root" name="Work Types"
+              parent="project.menu_project_config" sequence="99"/>
+
+    <menuitem id="menu_project_work_type"
+              name="Work Main Types"
+              parent="menu_project_work_type_root"
+              action="action_work_type"
+              sequence="20"/>
+
+    <menuitem id="menu_project_work_sub_type"
+              name="Work Sub Types"
+              parent="menu_project_work_type_root"
+              action="action_work_sub_type"
+              sequence="30"/>
+
+</odoo>

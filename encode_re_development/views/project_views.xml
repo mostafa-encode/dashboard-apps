@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_project_project_filter_re_development" model="ir.ui.view">
+        <field name="name">view.project.project.filter.re.development</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_project_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='tag_ids']" position="after">
+                <field name="stakeholder_ids"/>
+            </xpath>
+            <xpath expr="//filter[@name='tags']" position="after">
+                <filter string="Stakeholders" name="stakeholders" context="{'group_by': 'stakeholder_ids'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="edit_project_re_development" model="ir.ui.view">
+        <field name="name">project.view.form.re.development</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="priority" eval="1000"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <!-- Statusbar Field -->
+                <field name="status"
+                       widget="statusbar"
+                       statusbar_visible="new,in_progress,completed,on_hold,cancelled"
+                       invisible="1"/>
+
+                <!-- Action Buttons -->
+                <button name="action_set_in_progress"
+                        string="Progress"
+                        type="object"
+                        class="btn btn-primary"
+                        invisible="1"/>
+
+                <button name="action_set_completed"
+                        string="Complete"
+                        type="object"
+                        class="btn btn-success"
+                        invisible="1"/>
+
+                <button name="action_set_on_hold"
+                        string="On Hold"
+                        type="object"
+                        class="btn btn-secondary"
+                        invisible="1"/>
+
+                <button name="action_set_cancelled"
+                        string="Cancel"
+                        type="object"
+                        class="btn btn-danger"
+                        invisible="1"/>
+
+                <button name="action_set_to_new"
+                        string="Set To New"
+                        type="object"
+                        class="btn btn-secondary"
+                        invisible="status not in ['cancelled','on_hold','completed']"/>
+
+                <!-- print report -->
+                <button name="action_print_re_developer_pdf"
+                        string="RE Developer PDF"
+                        type="object"
+                        class="btn btn-secondary"/>
+                <button name="action_print_re_investor_pdf"
+                        string="Investor PDF"
+                        type="object"
+                        class="btn btn-secondary"/>
+
+            </xpath>
+
+            <xpath expr="//button[@name='action_open_share_project_wizard']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <field name="show_map_button" invisible="1"/>
+
+                <button
+                        name="action_open_google_maps"
+                        type="object"
+                        class="oe_stat_button"
+                        icon="fa-map-marker"
+                        string="Map"
+                        invisible="not show_map_button"
+                />
+            </xpath>
+            <xpath expr="//sheet//group" position="inside">
+                <group string="Project Location">
+                    <group>
+                        <field name="street"/>
+                        <field name="state"/>
+                        <field name="country"/>
+                    </group>
+                    <group>
+                        <field name="city"/>
+                        <field name="zip"/>
+                    </group>
+                </group>
+
+                <group string="Geolocation">
+                    <group>
+                        <field name="longitude"/>
+                    </group>
+                    <group>
+                        <field name="latitude"/>
+                    </group>
+                </group>
+            </xpath>
+
+            <xpath expr="//field[@name='date']" position="after">
+                <field name="template_id" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//field[@name='date_start']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='tag_ids']" position="before">
+                <field name="date_start" string="Planned Date" widget="daterange"
+                       options="{&quot;end_date_field&quot;: &quot;date&quot;, &quot;always_range&quot;: &quot;1&quot;}"
+                       required="date_start or date"/>
+            </xpath>
+
+            <xpath expr="//notebook//page[@name='description']" position="after">
+                <page name="feasibility_study" string="Feasibility Study">
+                    <notebook>
+                        <page name="inputs" string="Inputs">
+                            <!--   Land Data  -->
+                            <group string="Land Data" col="4">
+                                <group>
+                                    <field name="district"/>
+                                </group>
+                                <group>
+                                    <field name="type"/>
+                                </group>
+                                <group>
+                                </group>
+                                <group>
+                                </group>
+                            </group>
+                            <group col="4">
+                                <group>
+                                    <field name="depth"/>
+                                </group>
+                                <group>
+                                    <field name="width"/>
+                                </group>
+                                <group>
+                                    <field name="area"/>
+                                </group>
+                                <group>
+                                </group>
+                            </group>
+                            <group col="4">
+                                <group>
+                                    <field name="upper_factor"/>
+                                    <field name="surfaces_total"/>
+                                    <field name="meter_price" widget="monetary"
+                                           options="{'currency_field': 'currency_id'}"/>
+                                    <field name="average_areas"/>
+                                </group>
+                                <group>
+                                    <field name="total_upper_surfaces"/>
+                                    <field name="surfaces_factor"/>
+                                    <field name="meter_price_for_shareholders" widget="monetary"
+                                           options="{'currency_field': 'currency_id'}"/>
+                                    <field name="basement"/>
+                                </group>
+                                <group>
+                                    <field name="lower_factor"/>
+                                    <field name="total_sales_area"/>
+                                    <field name="villas_number"/>
+                                    <field name="ac_type"/>
+                                </group>
+                                <group>
+                                    <field name="total_lower_surfaces"/>
+                                    <field name="sales_area_factor"/>
+                                    <field name="apartments_number"/>
+                                    <field name="url_location" widget="url"/>
+                                </group>
+                                <field name="currency_id" invisible="1"/>
+                            </group>
+                            <!--  End Land Data  -->
+                            <group string="The Costs">
+                                <group>
+                                    <field name="cost_per_meter"/>
+                                    <field name="government_engineering_costs"/>
+                                </group>
+                                <group>
+                                    <field name="villa_cost"/>
+                                    <field name="supervision_percent"/>
+
+                                </group>
+                            </group>
+                            <group string="Financial Restructuring">
+                                <group>
+                                    <field name="financing_rate"/>
+                                    <field name="investors_share"/>
+                                </group>
+                                <group>
+                                    <field name="the_bank"/>
+                                    <field name="company_share"/>
+                                </group>
+                            </group>
+                            <group string="Company Statements">
+                                <group>
+                                    <field name="dev_supervision_for_input"/>
+                                    <field name="investment_mgmt_fee_for_input"/>
+                                </group>
+                                <group>
+                                    <field name="dev_marketing_striving_for_input"/>
+                                    <field name="company_investment_profits_for_input"/>
+                                </group>
+                            </group>
+                        </page>
+
+
+                        <page name="re_developer" string="RE Developer">
+                            <!--   Land Data  -->
+                            <group string="Costs" col="4">
+                                <group>
+                                    <field name="land_cost"/>
+                                </group>
+                                <group>
+                                    <field name="land_commission"/>
+                                </group>
+                                <group>
+                                    <field name="re_transaction_tax"/>
+                                </group>
+                                <group>
+                                    <field name="land_cost_total"/>
+                                </group>
+                            </group>
+                            <group col="4">
+                                <group>
+                                    <field name="construction_cost_per_meter"/>
+                                </group>
+                                <group></group>
+                                <group>
+                                    <field name="villa_construction_cost"/>
+                                </group>
+                                <group></group>
+                            </group>
+                            <group col="4">
+                                <group>
+                                    <field name="estimated_construction_cost"/>
+                                </group>
+                                <group>
+                                    <field name="gov_eng_costs_dev"/>
+                                </group>
+                                <group>
+                                    <field name="supervision_dev"/>
+                                </group>
+                                <group>
+                                    <field name="financing_cost"/>
+                                </group>
+                            </group>
+                            <group col="4">
+                                <group>
+                                    <field name="total_cost"/>
+                                </group>
+                                <group></group>
+                                <group></group>
+                                <group></group>
+                            </group>
+                            <group col="4">
+                                <group>
+                                    <field name="floor_avg_cost"/>
+                                </group>
+                                <group></group>
+                                <group></group>
+                                <group></group>
+                            </group>
+                            <!--  End Land Data  -->
+
+                            <group string="Financial Restructuring">
+                                <group>
+                                    <field name="capital"/>
+                                    <field name="total_company_amounts"/>
+                                </group>
+                                <group>
+                                    <field name="financing"/>
+                                    <field name="total_investor_amounts"/>
+                                </group>
+
+                            </group>
+                            <group string="Sales Data">
+                                <group>
+                                    <field name="avg_floor_price_incl_commission"/>
+                                    <field name="sales_total"/>
+                                </group>
+                                <group>
+                                    <field name="avg_floor_price_excl_commission"/>
+                                    <field name="profits_total"/>
+                                </group>
+
+                            </group>
+                            <group col="4">
+                                <group>
+                                    <field name="project_profit_margin"/>
+                                </group>
+                                <group>
+                                    <field name="capital_gains_rate"/>
+                                </group>
+                                <group>
+                                    <field name="investor_profit_percent"/>
+                                </group>
+                                <group>
+                                    <field name="investor_profits"/>
+                                </group>
+                            </group>
+                            <!--  End Sales Data  -->
+
+                            <group string="Company Profits" col="4">
+                                <group>
+                                    <field name="company_investment_profits"/>
+                                </group>
+                                <group>
+                                    <field name="investment_mgmt_fee"/>
+                                </group>
+                                <group>
+                                    <field name="dev_marketing_striving"/>
+                                </group>
+                                <group>
+                                    <field name="dev_supervision"/>
+                                </group>
+                            </group>
+                            <group>
+                                <field name="diff_meter_price"/>
+                            </group>
+                            <group>
+                                <field name="total_dev_earnings"/>
+                            </group>
+                        </page>
+                        <!--                        <page name="investor" string="Investor">-->
+                        <!--                        </page>-->
+                        <!--                        <page name="initial_pricing" string="Initial Pricing">-->
+                        <!--                        </page>-->
+                        <!--                        <page name="financing_cost" string="Financing Cost">-->
+                        <!--                        </page>-->
+                    </notebook>
+                </page>
+                <page name="stakeholders" string="Stakeholders">
+                    <group>
+                        <field name="stakeholder_ids" widget="many2many_tags" options="{'no_create': False}"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>

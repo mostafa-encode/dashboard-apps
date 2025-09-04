@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_material_requisition_base_user,access.material.requisition.base.user,model_material_requisition,base.group_user,1,1,1,1
+access_material_requisition_user,access.material.requisition.user,model_material_requisition,group_material_requisition_user,1,1,1,1
+access_material_requisition_approver,access.material.requisition.approver,model_material_requisition,group_material_requisition_approver,1,1,0,0
+access_material_requisition_line_base_user,access.material.requisition.line.base.user,model_material_requisition_line,base.group_user,1,0,0,0
+access_material_requisition_line_user,access.material.requisition.line.user,model_material_requisition_line,group_material_requisition_user,1,1,1,1
+access_material_requisition_line_approver,access.material.requisition.line.approver,model_material_requisition_line,group_material_requisition_approver,1,1,1,1
+access_work_type_base_user,access.work.type.base.user,model_work_type,base.group_user,1,0,0,0
+access_work_type_user,access.work.type.user,model_work_type,group_material_requisition_user,1,1,1,1
+access_work_sub_type_base_user,access.work.sub.type.base.user,model_work_sub_type,base.group_user,1,0,0,0
+access_work_sub_type_user,access.work.sub.type.user,model_work_sub_type,group_material_requisition_user,1,1,1,1

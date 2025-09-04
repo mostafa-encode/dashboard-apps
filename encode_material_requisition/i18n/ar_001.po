@@ -1,0 +1,728 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* encode_material_requisition
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-24 07:20+0000\n"
+"PO-Revision-Date: 2025-07-24 07:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__purchase_order_count
+msgid "# of RFQs"
+msgstr "عدد طلبات الأسعار"
+
+#. module: encode_material_requisition
+#: model_terms:ir.ui.view,arch_db:encode_material_requisition.view_material_requisition_form
+msgid "/&gt;"
+msgstr ""
+
+#. module: encode_material_requisition
+#: model:mail.template,body_html:encode_material_requisition.email_template_material_requisition_notification_v2
+msgid ""
+"<div style=\"direction: rtl; text-align: right; font-family: 'Arial', sans-serif; font-size: 14px; line-height: 1.6; color: #333;\">\n"
+"                    <p style=\"margin-bottom: 20px;\">\n"
+"                        <t t-esc=\"object.project_id.user_id.name or 'المدير'\"/> عزيزي\n"
+"                    </p>\n"
+"                    \n"
+"                    <p style=\"margin-bottom: 20px;\">\n"
+"                        تحية طيبة ،، وبعد\n"
+"                    </p>\n"
+"\n"
+"                    <p>\n"
+"                        <t t-esc=\"object.name or 'غير محدد'\"/> لديك طلب مواد جديد رقم\n"
+"                    </p>\n"
+"                    \n"
+"                    <p>\n"
+"                        <t t-esc=\"object.project_id.name or 'غير محدد'\"/> للمشروع <t t-esc=\"object.create_uid.name or 'غير محدد'\"/> بواسطة المقاول\n"
+"                    </p>\n"
+"                    \n"
+"                    <p style=\"margin-bottom: 20px;\">\n"
+"                        الرجاء مراجعة الطلب واكمال العملية في اقرب وقت\n"
+"                    </p>\n"
+"                    \n"
+"                    <p style=\"margin-top: 30px;\">\n"
+"                        مع الشكر الجزيل\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__message_needaction
+msgid "Action Needed"
+msgstr "مطلوب اجراء"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "رمز استثناء النشاط"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "رمز نوع النشاط"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition_line__allowed_vendor_ids
+msgid "Allowed Vendors"
+msgstr "الموردين المسموحين"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition_line__allowed_work_sub_type_ids
+msgid "Allowed Work Subtypes"
+msgstr "الأنواع الفرعية المسموحة للعمل"
+
+#. module: encode_material_requisition
+#: model_terms:ir.ui.view,arch_db:encode_material_requisition.view_material_requisition_form
+msgid "Approve"
+msgstr "اعتماد"
+
+#. module: encode_material_requisition
+#: model:res.groups,name:encode_material_requisition.group_material_requisition_approver
+msgid "Approve Material Requisition"
+msgstr "الموافقة على طلب المواد"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields.selection,name:encode_material_requisition.selection__material_requisition__state__approved
+msgid "Approved"
+msgstr "معتمد"
+
+#. module: encode_material_requisition
+#. odoo-python
+#: code:addons/encode_material_requisition/models/material_requisition.py:0
+msgid ""
+"At least one line must have Received Qty > 0 before marking as received."
+msgstr "يجب أن يكون لدى سطر واحد على الأقل كمية مستلمة > 0 قبل الاستلام"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: encode_material_requisition
+#: model_terms:ir.ui.view,arch_db:encode_material_requisition.view_material_requisition_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields.selection,name:encode_material_requisition.selection__material_requisition__state__cancelled
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_sub_type__code
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_type__code
+msgid "Code"
+msgstr "الرمز"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__color
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_sub_type__color
+msgid "Color"
+msgstr "اللون"
+
+#. module: encode_material_requisition
+#: model:res.groups,name:encode_material_requisition.group_material_requisition_user
+msgid "Create Material Requisition"
+msgstr "إنشاء طلب مواد"
+
+#. module: encode_material_requisition
+#: model:res.groups,name:encode_material_requisition.group_material_requisition_rfq_creator
+msgid "Create Material Requisition RFQ"
+msgstr "إنشاء طلب أسعار للمواد"
+
+#. module: encode_material_requisition
+#: model_terms:ir.ui.view,arch_db:encode_material_requisition.view_material_requisition_form
+msgid "Create RFQ"
+msgstr "إنشاء طلب عرض سعر"
+
+#. module: encode_material_requisition
+#: model_terms:ir.actions.act_window,help:encode_material_requisition.action_work_sub_type
+msgid "Create work sub types to categorize tasks in requisition lines."
+msgstr "إنشاء الأنواع الفرعية للعمل لتصنيف المهام في بنود الطلب."
+
+#. module: encode_material_requisition
+#: model_terms:ir.actions.act_window,help:encode_material_requisition.action_work_type
+msgid "Create work types to categorize tasks in requisition lines."
+msgstr "إنشاء أنواع العمل لتصنيف المهام في بنود الطلب."
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__create_uid
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition_line__create_uid
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_sub_type__create_uid
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_type__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__create_date
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition_line__create_date
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_sub_type__create_date
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_type__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition_line__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__date
+msgid "Date"
+msgstr "تاريخ الطلب"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,help:encode_material_requisition.field_material_requisition_line__product_uom
+msgid ""
+"Default unit of measure used for purchase orders. It must be in the same "
+"category as the default unit of measure."
+msgstr ""
+"وحدة القياس الافتراضية المستخدمة لأوامر الشراء. يجب أن تكون في نفس فئة وحدة "
+"القياس الافتراضية."
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition_line__delivery_id
+msgid "Delivery"
+msgstr "التسليم"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__description
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition_line__description
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_sub_type__description
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_type__description
+msgid "Description"
+msgstr "وصف البند"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__display_name
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition_line__display_name
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_sub_type__display_name
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_type__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields.selection,name:encode_material_requisition.selection__material_requisition__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,help:encode_material_requisition.field_material_requisition__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "رمز Font Awesome مثل fa-tasks"
+
+#. module: encode_material_requisition
+#: model_terms:ir.ui.view,arch_db:encode_material_requisition.view_material_requisition_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__has_message
+msgid "Has Message"
+msgstr "له رسالة"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__id
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition_line__id
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_sub_type__id
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_type__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__activity_exception_icon
+msgid "Icon"
+msgstr "الرمز"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,help:encode_material_requisition.field_material_requisition__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "رمز للإشارة إلى نشاط استثنائي."
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,help:encode_material_requisition.field_material_requisition__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديده، فإن الرسائل الجديدة تتطلب انتباهك."
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,help:encode_material_requisition.field_material_requisition__message_has_error
+#: model:ir.model.fields,help:encode_material_requisition.field_material_requisition__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده، فإن بعض الرسائل بها خطأ في التسليم."
+
+#. module: encode_material_requisition
+#: model:ir.model.fields.selection,name:encode_material_requisition.selection__material_requisition__state__in_progress
+msgid "In Progress"
+msgstr "قيد التنفيذ"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__write_uid
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition_line__write_uid
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_sub_type__write_uid
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_type__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__write_date
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition_line__write_date
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_sub_type__write_date
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_type__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__line_ids
+msgid "Lines"
+msgstr "البنود"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__name
+msgid "MR#"
+msgstr "رقم طلب المواد"
+
+#. module: encode_material_requisition
+#: model:res.groups,name:encode_material_requisition.group_mark_material_arrived
+msgid "Mark Material Arrived"
+msgstr "تحديد وصول المواد"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__material_arrived_date
+msgid "Material Arrival Date"
+msgstr "تاريخ وصول المواد"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields.selection,name:encode_material_requisition.selection__material_requisition__state__material_arrived
+#: model_terms:ir.ui.view,arch_db:encode_material_requisition.view_material_requisition_form
+msgid "Material Arrived"
+msgstr "تم الاستلام"
+
+#. module: encode_material_requisition
+#: model:ir.model,name:encode_material_requisition.model_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_purchase_order__requisition_id
+#: model:ir.module.category,name:encode_material_requisition.module_category_material_requisition
+#: model:ir.ui.menu,name:encode_material_requisition.menu_material_requisition_root
+#: model_terms:ir.ui.view,arch_db:encode_material_requisition.view_material_requisition_form
+msgid "Material Requisition"
+msgstr "طلبات المواد"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_project_project__material_requisition_count
+msgid "Material Requisition Count"
+msgstr "عدد طلبات المواد"
+
+#. module: encode_material_requisition
+#: model:ir.model,name:encode_material_requisition.model_material_requisition_line
+msgid "Material Requisition Line"
+msgstr "بند طلب المواد"
+
+#. module: encode_material_requisition
+#: model:mail.template,name:encode_material_requisition.email_template_material_requisition_notification_v2
+msgid "Material Requisition Notification"
+msgstr "إشعار طلب المواد"
+
+#. module: encode_material_requisition
+#: model:ir.actions.act_window,name:encode_material_requisition.action_material_requisition
+#: model:ir.ui.menu,name:encode_material_requisition.menu_material_requisition
+#: model_terms:ir.ui.view,arch_db:encode_material_requisition.view_project_form_inherit_requisition
+msgid "Material Requisitions"
+msgstr "طلبات المواد"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في توصيل الرسالة"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "موعد انتهاء نشاطي"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_sub_type__name
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_type__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: encode_material_requisition
+#. odoo-python
+#: code:addons/encode_material_requisition/models/material_requisition.py:0
+msgid "New"
+msgstr "إنشاء طلب"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "حدث النشاط القادم في التقويم"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "موعد النشاط القادم"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط القادم"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط القادم"
+
+#. module: encode_material_requisition
+#. odoo-python
+#: code:addons/encode_material_requisition/models/material_requisition.py:0
+msgid "No valid lines with vendor found to create RFQ."
+msgstr "لم يتم العثور على بنود صالحة مع مورد لإنشاء طلب أسعار."
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,help:encode_material_requisition.field_material_requisition_line__receiving_notes
+msgid "Notes about the received delivery"
+msgstr ""
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,help:encode_material_requisition.field_material_requisition__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,help:encode_material_requisition.field_material_requisition__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ في التوصيل"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,help:encode_material_requisition.field_project_project__subcontractor_and_supervisor_ids
+msgid ""
+"Portal users (subcontractors or supervisors) who can access and create "
+"material requisitions for this project."
+msgstr ""
+"مستخدمو البوابة (المقاولون الفرعيون أو المشرفون) الذين يمكنهم الوصول وإنشاء "
+"طلبات المواد لهذا المشروع."
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition_line__product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: encode_material_requisition
+#: model:ir.model,name:encode_material_requisition.model_project_project
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__project_id
+#: model_terms:ir.ui.view,arch_db:encode_material_requisition.view_material_requisition_search
+msgid "Project"
+msgstr "المشروع"
+
+#. module: encode_material_requisition
+#: model:ir.model,name:encode_material_requisition.model_purchase_order
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: encode_material_requisition
+#: model_terms:ir.ui.view,arch_db:encode_material_requisition.view_material_requisition_form
+msgid "Purchase Orders"
+msgstr "أوامر الشراء"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition_line__product_uom_qty
+msgid "Quantity"
+msgstr "الكمية المطلوبة"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,help:encode_material_requisition.field_material_requisition_line__received_qty
+msgid "Quantity of materials actually received"
+msgstr ""
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__rfq_created
+msgid "RFQ Created"
+msgstr "تم إنشاء طلب أسعار"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__purchase_order_ids
+msgid "RFQs"
+msgstr "طلبات الأسعار"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__rating_ids
+msgid "Ratings"
+msgstr "التقييمات"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition_line__received_qty
+msgid "Received Qty"
+msgstr "الكمية المستلمة"
+
+#. module: encode_material_requisition
+#. odoo-python
+#: code:addons/encode_material_requisition/models/material_requisition.py:0
+msgid "Received quantity cannot exceed the requested quantity."
+msgstr "لا يمكن أن تتجاوز الكمية المستلمة الكمية المطلوبة"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition_line__receiving_notes
+msgid "Receiving Notes"
+msgstr "ملاحظات الاستلام"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition_line__requisition_id
+msgid "Requisition"
+msgstr "الطلب"
+
+#. module: encode_material_requisition
+#: model_terms:ir.ui.view,arch_db:encode_material_requisition.view_material_requisition_form
+msgid "Requisition Lines"
+msgstr "بنود الطلب"
+
+#. module: encode_material_requisition
+#: model_terms:ir.ui.view,arch_db:encode_material_requisition.view_material_requisition_form
+msgid "Reset to Draft"
+msgstr "إعادة التعيين كمسودة"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في توصيل الرسائل النصية"
+
+#. module: encode_material_requisition
+#: model_terms:ir.ui.view,arch_db:encode_material_requisition.view_material_requisition_search
+msgid "Search Material Requisitions"
+msgstr "البحث في طلبات المواد"
+
+#. module: encode_material_requisition
+#: model:mail.template,description:encode_material_requisition.email_template_material_requisition_notification_v2
+msgid ""
+"Send notification email to project manager when a new material requisition "
+"is created by subcontractors or supervisors."
+msgstr ""
+"إرسال إشعار بالبريد الإلكتروني إلى مدير المشروع عند إنشاء طلب مواد جديد من "
+"قبل المقاولين الفرعيين أو المشرفين."
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: encode_material_requisition
+#: model_terms:ir.ui.view,arch_db:encode_material_requisition.view_material_requisition_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,help:encode_material_requisition.field_material_requisition__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة مبنية على الأنشطة\n"
+"متأخر: تاريخ الاستحقاق قد مضى\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"مخطط: أنشطة مستقبلية."
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__sub_project_id
+msgid "Sub Project"
+msgstr "الوحدة"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_project_project__subcontractor_and_supervisor_ids
+msgid "Subcontractors"
+msgstr "المقاولون الفرعيون"
+
+#. module: encode_material_requisition
+#: model_terms:ir.ui.view,arch_db:encode_material_requisition.view_material_requisition_form
+msgid "Submit for Approval"
+msgstr "إرسال للموافقة"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_type__work_sub_type_count
+msgid "Subtypes Count"
+msgstr "عدد الأنواع الفرعية"
+
+#. module: encode_material_requisition
+#: model_terms:ir.ui.view,arch_db:encode_material_requisition.view_material_requisition_form
+msgid "Total"
+msgstr "المجموع"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition_line__total_price
+msgid "Total Price"
+msgstr "السعر الإجمالي"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,help:encode_material_requisition.field_material_requisition__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي في السجل."
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition_line__cost
+msgid "Unit Cost"
+msgstr "تكلفة الوحدة"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition_line__product_uom
+msgid "UoM"
+msgstr "وحدة القياس"
+
+#. module: encode_material_requisition
+#: model:ir.module.category,description:encode_material_requisition.module_category_material_requisition
+msgid "User access levels for the Material Requisition module."
+msgstr "مستويات الوصول للمستخدمين لوحدة طلبات المواد."
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition_line__vendor_id
+msgid "Vendor"
+msgstr "المورد"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields.selection,name:encode_material_requisition.selection__material_requisition__state__waiting
+msgid "Waiting for Approval"
+msgstr "بانتظار الموافقة"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,help:encode_material_requisition.field_material_requisition__website_message_ids
+msgid "Website communication history"
+msgstr "تاريخ التواصل عبر الموقع"
+
+#. module: encode_material_requisition
+#: model:ir.ui.menu,name:encode_material_requisition.menu_project_work_type
+msgid "Work Main Types"
+msgstr "بنود العمل الرئيسية"
+
+#. module: encode_material_requisition
+#: model:ir.model,name:encode_material_requisition.model_work_sub_type
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition_line__work_sub_type_id
+msgid "Work Sub Type"
+msgstr "البند الفرعي"
+
+#. module: encode_material_requisition
+#: model:ir.actions.act_window,name:encode_material_requisition.action_work_sub_type
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_type__work_sub_type_ids
+#: model:ir.ui.menu,name:encode_material_requisition.menu_project_work_sub_type
+#: model_terms:ir.ui.view,arch_db:encode_material_requisition.view_work_type_form
+msgid "Work Sub Types"
+msgstr "بنود العمل الفرعية"
+
+#. module: encode_material_requisition
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_type__sub_type_ids
+msgid "Work Subtypes"
+msgstr "الأنواع الفرعية للعمل"
+
+#. module: encode_material_requisition
+#: model:ir.model,name:encode_material_requisition.model_work_type
+#: model:ir.model.fields,field_description:encode_material_requisition.field_material_requisition__work_type_id
+#: model:ir.model.fields,field_description:encode_material_requisition.field_work_sub_type__work_type_id
+#: model_terms:ir.ui.view,arch_db:encode_material_requisition.view_material_requisition_search
+msgid "Work Type"
+msgstr "البند الرئيسي"
+
+#. module: encode_material_requisition
+#: model:ir.actions.act_window,name:encode_material_requisition.action_work_type
+#: model:ir.ui.menu,name:encode_material_requisition.menu_project_work_type_root
+msgid "Work Types"
+msgstr "بنود العمل"
+
+#. module: encode_material_requisition
+#: model:mail.template,subject:encode_material_requisition.email_template_material_requisition_notification_v2
+msgid "طلب مواد جديد"
+msgstr ""
+
+#. module: encode_material_requisition
+#. odoo-python
+#: code:addons/encode_material_requisition/models/material_requisition.py:0
+msgid "⚠️ Notification email not sent: Email template not found."
+msgstr ""
+"⚠️ لم يتم إرسال إشعار البريد الإلكتروني: لم يتم العثور على قالب البريد "
+"الإلكتروني."
+
+#. module: encode_material_requisition
+#. odoo-python
+#: code:addons/encode_material_requisition/models/material_requisition.py:0
+msgid ""
+"⚠️ Notification email not sent: No project manager assigned to this project."
+msgstr ""
+"⚠️ لم يتم إرسال إشعار البريد الإلكتروني: لا يوجد مدير مشروع مخصص لهذا "
+"المشروع."
+
+#. module: encode_material_requisition
+#. odoo-python
+#: code:addons/encode_material_requisition/models/material_requisition.py:0
+msgid ""
+"⚠️ Notification email not sent: Project manager does not have an email "
+"address."
+msgstr ""
+"⚠️ لم يتم إرسال إشعار البريد الإلكتروني: مدير المشروع ليس لديه عنوان بريد "
+"إلكتروني."
+
+#. module: encode_material_requisition
+#. odoo-python
+#: code:addons/encode_material_requisition/models/material_requisition.py:0
+msgid "❌ Failed to send notification email: %s"
+msgstr "❌ فشل في إرسال إشعار البريد الإلكتروني: %s"
+
+#. module: encode_material_requisition
+#. odoo-python
+#: code:addons/encode_material_requisition/models/material_requisition.py:0
+msgid "📧 Notification email sent to project manager: %s"
+msgstr "📧 تم إرسال إشعار البريد الإلكتروني إلى مدير المشروع: %s"
