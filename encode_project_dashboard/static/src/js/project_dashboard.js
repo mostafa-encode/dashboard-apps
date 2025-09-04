@@ -410,10 +410,10 @@ class ProjectDashboard extends Component {
 
 
     // Refresh data
-    refresh() {
-        console.log("🔧 Refreshing data...");
-        this.loadDashboardData(); 
-    }
+    //    refresh() {
+    //        console.log("🔧 Refreshing data...");
+    //        this.loadDashboardData();
+    //    }
 
     // Clear Search
     clearSearch() {
@@ -517,6 +517,7 @@ class ProjectDashboard extends Component {
         // Update data and trigger synchronized animations every 10 seconds
         this.updateInterval = setInterval(async () => {
             await this.updateDashboardData();
+            this.applyFilters();
         }, 10000); // 10 seconds
     }
     async updateDashboardData() {
@@ -528,7 +529,7 @@ class ProjectDashboard extends Component {
                 []
             );
 
-            // Update state with new data
+            // Calculate new metrics
             const updatedProjects = rawData.map(project => this.calculateProjectMetrics(project));
 
             // Animate transitions from current values to new values
@@ -538,6 +539,7 @@ class ProjectDashboard extends Component {
             this.state.projects = updatedProjects;
             this.state.filteredProjects = updatedProjects;
             this.state.lastUpdate = new Date().toLocaleTimeString();
+
 
             console.log("🔧 Dashboard data updated successfully");
         } catch (error) {
